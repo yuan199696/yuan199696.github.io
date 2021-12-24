@@ -1,0 +1,525 @@
+<!-- build time:Sat Dec 25 2021 00:02:50 GMT+0800 (中国标准时间) --><!DOCTYPE html><html lang="zh-CN,en,default"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="书院十四先生" href="https://www.baiyezi.vip/rss.xml"><link rel="alternate" type="application/atom+xml" title="书院十四先生" href="https://www.baiyezi.vip/atom.xml"><link rel="alternate" type="application/json" title="书院十四先生" href="https://www.baiyezi.vip/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="Java,Docker,WSL"><link rel="canonical" href="https://www.baiyezi.vip/Win10%E5%AE%89%E8%A3%85docker"><title>Win10安装docker - Java | 书院十四先生</title><meta name="generator" content="Hexo 5.4.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">Win10安装docker</h1><div class="meta"><span class="item" title="创建时间：2021-03-06 18:12:26"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2021-03-06T18:12:26+08:00">2021-03-06</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>29k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>26 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">书院十四先生</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/" itemprop="item" rel="index" title="分类于 Java"><span itemprop="name">Java</span></a><meta itemprop="position" content="1"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://www.baiyezi.vip/Win10%E5%AE%89%E8%A3%85docker"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.png"><meta itemprop="name" content="fanfanfan"><meta itemprop="description" content=", 花有重开日，人无再少年"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="书院十四先生"></span><div class="body md" itemprop="articleBody"><h2 id="wsl安装"><a class="anchor" href="#wsl安装">#</a> WSL 安装</h2><p><span class="exturl" data-url="aHR0cHM6Ly95dW5hbi5ibG9nLmNzZG4ubmV0L2FydGljbGUvZGV0YWlscy8xMDgzOTY3ODc=">WSL 安装</span></p><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTg4MzkzMy9hcnRpY2xlL2RldGFpbHMvMTA2MDg1MTg0">参考</span></p><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZG9ja2VyLWZvci13aW5kb3dzL2luc3RhbGwv">docker 下载</span></p><p>docker 本身的运行是依赖于 Linux 环境的，如果想要在 Windows 运行 docker，那么就需要安装相关 Linux 环境，即 WSL（旧的做法是启动 Hyper 就行），WSL 能加快 docker 的启动</p><p>安装完成之后按照 docker 提示执行：</p><pre><code>docker run -d -p 80:80 docker/getting-started
+</code></pre><p>结果报错：</p><pre><code>docker: error during connect: In the default daemon configuration on Windows, the docker client must be run with elevated privileges to connect.: Post http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/containers/create: open //./pipe/docker_engine: The system cannot find the file specified.
+See 'docker run --help'.
+</code></pre><p>转到守护进程：</p><pre><code>PS C:\WINDOWS\system32&gt; cd &quot;C:\Program Files\Docker\Docker&quot;
+PS C:\Program Files\Docker\Docker&gt; ./DockerCli.exe -SwitchDaemon
+</code></pre><p>docker 界面弹出提示：</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/image-20210316140007149.png" alt="image-20210316140007149"></p><p>需要安装 WSL（即 Windows-Subsystem-Linux），即适用于 windows 的 Linux 的子系统，<a href="!%5B%5D(https://gitee.com/bfanfanfan/img/raw/master/docsify/image-20210316140007149.png)">WSL 安装</a>。</p><p>根据提示去 Microsoft Store 下载安装某个 linux 版本（我这里使用 Ubuntu）</p><p>下载完成后启动 Ubuntu，报错：</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/image-20210317095559171.png" alt="image-20210317095559171"></p><p>解决：</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/image-20210317095757109.png" alt="image-20210317095757109"></p><p>然后再次启动 Ubuntu，设置用户名和密码</p><p><img data-src="Win10%E5%AE%89%E8%A3%85docker.assets/image-20210317095932726.png" alt="image-20210317095932726"></p><p>此时，重新启动 docker 服务</p><pre><code class="language-cmd">PS C:\WINDOWS\system32&gt; cd &quot;C:\Program Files\Docker\Docker&quot;                                                                                                               PS C:\Program Files\Docker\Docker&gt; ./DockerCli.exe -SwitchDaemon                                                                                                                                                                                                              
+PS C:\Program Files\Docker\Docker&gt; Net stop com.docker.service                                                                                                               Docker Desktop Service 服务正在停止.
+Docker Desktop Service 服务已成功停止。
+
+PS C:\Program Files\Docker\Docker&gt; Net start com.docker.service                                                                                                               Docker Desktop Service 服务正在启动 .
+Docker Desktop Service 服务已经启动成功。
+
+PS C:\Program Files\Docker\Docker&gt; docker ps                                                                                                                                             ONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+</code></pre><p>测试镜像</p><pre><code class="language-cmd">PS C:\Program Files\Docker\Docker&gt; docker run -d -p 80:80 docker/getting-started                                                                                   Unable to find image 'docker/getting-started:latest' locally
+latest: Pulling from docker/getting-started
+aad63a933944: Pull complete                                                                                                                                                                           b14da7a62044: Pull complete                                                                                                                                                                           43784d40d66: Pull complete                                                                                                                                                                             6f617e610986: Pull complete                                                                                                                                                                           Digest: sha256:d2c4fb0641519ea208f20ab03dc40ec2a5a53fdfbccca90bef14f870158ed577
+Status: Downloaded newer image for docker/getting-started:latest
+4b451522257360eb2fe688c5654c13a00432b27e17ce8824e55a646ddbdc0a36
+</code></pre><p>之后在 docker 界面中就产生了一个镜像</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/image-20210317101011583.png" alt="image-20210317101011583"></p><h3 id="wsl目录更改"><a class="anchor" href="#wsl目录更改">#</a> WSL 目录更改</h3><p>从 Microsoft Store 中下载安装的 Ubuntu 默认会安装在 c 盘，由于 c 盘目录空间有限，所以需要将其放在其它盘符</p><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlZV9qYWNrZ2cvYXJ0aWNsZS9kZXRhaWxzLzEwNjczODg3OA==">参考</span></p><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy93c2wvd3NsLWNvbmZpZw==">参考</span></p><pre><code class="language-cmd">PS C:\WINDOWS\system32&gt; wsl -l --all -v
+  NAME                   STATE           VERSION
+* Ubuntu                 Stopped         2
+  docker-desktop         Stopped         2
+  docker-desktop-data    Stopped         2
+PS C:\WINDOWS\system32&gt; wsl --export Ubuntu E:\WSL\ubuntu.tar
+PS C:\WINDOWS\system32&gt; wsl --unregister Ubuntu  #注销会丢失已经安装的所有数据，所以一定要先进行上一步的备份
+正在注销...
+PS C:\WINDOWS\system32&gt; wsl --import Ubuntu E:\WSL\ubuntu E:\WSL\ubuntu.tar --version 2
+PS C:\WINDOWS\system32&gt; ubuntu config --default-user fan #设置默认登陆用户为安装时用户名
+
+#将默认分发版设置为Ubuntu
+PS C:\Program Files\Docker\Docker&gt; wsl -s Ubuntu
+
+#重启WSL服务
+PS C:\WINDOWS\system32&gt; net stop LxssManager                                                                            
+LxssManager 服务正在停止.
+LxssManager 服务已成功停止。
+PS C:\WINDOWS\system32&gt; net start LxssManager                                                                          
+请求的服务已经启动。
+
+#如果各个分发版都是stopped状态，那么重新启动计算机
+</code></pre><h2 id="docker使用"><a class="anchor" href="#docker使用">#</a> docker 使用</h2><h3 id="基础命令"><a class="anchor" href="#基础命令">#</a> 基础命令</h3><pre><code class="language-cmd">#查看本地镜像列表哦
+PS C:\Program Files\Docker\Docker&gt; docker images
+REPOSITORY          TAG       IMAGE ID       CREATED       SIZE
+ubuntu              v2        8c50166951be   4 hours ago   100MB
+ubuntu              latest    4dd97cefde62   13 days ago   72.9MB
+
+
+## 创建一个指定名字的容器，以Ubuntu作为镜像，并在该镜像中输出 helloworld。
+# docker run  -it  --name  容器名  镜像:镜像版本
+#-it是可选的，表示创建完容器后是否立即进入该容器
+#优先从本地选择已经拥有的镜像，如果如果没有就从docker hub上自动下载镜像；如果不写镜像版本（tag），默认将选择镜像列表中第一个镜像，或者下载最新版本的镜像
+#/bin/echo：在镜像中输出
+PS C:\Program Files\Docker\Docker&gt; docker run --name test_ubuntu ubuntu:latest  /bin/echo &quot;helloworld&quot;
+helloworld
+
+# 再次运行该镜像后直接打印helloworld
+PS C:\Program Files\Docker\Docker&gt; docker run ubuntu /bin/echo &quot;helloworld&quot;                                                                                         helloworld
+
+
+PS C:\Program Files\Docker\Docker&gt; docker run -it --name test_ubuntu_1 ubuntu:latest /bin/bash
+root@36e34787245a:/# exit
+exit
+# 查看docker中所有容器，不加 -a 代表查看正在运行的容器
+PS C:\Program Files\Docker\Docker&gt; docker ps -a
+CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS                      PORTS     NAMES
+36e34787245a   ubuntu:latest   &quot;/bin/bash&quot;   33 seconds ago   Exited (0) 27 seconds ago             test_ubuntu_1
+
+#启动指定容器
+PS C:\Program Files\Docker\Docker&gt; docker start 36e34787245a
+36e34787245a
+
+PS C:\Program Files\Docker\Docker&gt; docker ps
+#镜像ID               镜像              镜像启动运行的命令 创建时间      镜像状态       端口           镜像名字 
+CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS         PORTS     NAMES
+36e34787245a   ubuntu:latest   &quot;/bin/bash&quot;   53 seconds ago   Up 5 seconds             test_ubuntu_1
+
+# 加上参数 -d 就代表 创建一个以进程方式运行的容器，即后台运行的容器
+PS C:\Program Files\Docker\Docker&gt; docker run -d ubuntu /bin/echo &quot;hi&quot;                                                                                                   da394093f4bae7595cb9e6725cd3802137e6b09eb1f49890e5f5506a61b21642
+
+#查看某个命令的使用方式，如查看stats
+PS C:\Program Files\Docker\Docker&gt; docker stats --help                                                                                                                                                                                                                         
+Usage:  docker stats [OPTIONS] [CONTAINER...]
+
+Display a live stream of container(s) resource usage statistics
+
+Options:
+  -a, --all             Show all containers (default shows just running)
+      --format string   Pretty-print images using a Go template
+      --no-stream       Disable streaming stats and only pull the first result
+      --no-trunc        Do not truncate output
+      
+#进入我们刚才安装的ubuntu，即以ubuntu镜像启动一个容器。-i代表交互式操作；-t代表终端；/bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash
+PS C:\Program Files\Docker\Docker&gt; docker run -it ubuntu /bin/bash                                                                                                         root@6e157746978d:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+#退出终端
+root@6e157746978d:/# exit
+exit
+
+#通过容器ID来启动一个容器
+PS C:\Program Files\Docker\Docker&gt; docker start 6e157746978d  #停止容器用stop；重启用restart                                                              e157746978d
+PS C:\Program Files\Docker\Docker&gt; docker ps                                                                                                                                             CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS              PORTS     NAMES
+6e157746978d   ubuntu          &quot;/bin/bash&quot;   8 minutes ago    Up About a minute             elated_galois
+0c79cb49de28   ubuntu:latest   &quot;/bin/bash&quot;   41 minutes ago   Up 41 minutes                 ubuntu
+
+#进入已经启动的容器，attach在退出容器时会停止该容器
+PS C:\Program Files\Docker\Docker&gt; docker attach 6e157746978d                                                                                                               root@6e157746978d:/# exit
+exit
+
+PS C:\Program Files\Docker\Docker&gt; docker start 6e157746978d                                                                                                                 6e157746978d
+#进入已经启动的容器，exec在退出容器时不会停止该容器
+PS C:\Program Files\Docker\Docker&gt; docker exec -it 6e157746978d /bin/bash                                                                                           root@6e157746978d:/# exit
+exit
+PS C:\Program Files\Docker\Docker&gt; docker ps                                                                                                                                             CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS          PORTS     NAMES
+6e157746978d   ubuntu          &quot;/bin/bash&quot;   19 minutes ago   Up 55 seconds             elated_galois
+0c79cb49de28   ubuntu:latest   &quot;/bin/bash&quot;   52 minutes ago   Up 52 minutes             ubuntu
+
+#将某个容器导出到本地
+PS C:\Program Files\Docker\Docker&gt; docker export 6e157746978d &gt; E:\ubuntu.tar
+
+PS C:\Program Files\Docker\Docker&gt; docker ps
+CONTAINER ID   IMAGE           COMMAND       CREATED             STATUS             PORTS     NAMES
+6e157746978d   ubuntu          &quot;/bin/bash&quot;   37 minutes ago      Up 18 minutes                elated_galois
+0c79cb49de28   ubuntu:latest   &quot;/bin/bash&quot;   About an hour ago   Up About an hour             ubuntu
+#删除某个正在运行的容器
+PS C:\Program Files\Docker\Docker&gt; docker rm -f 0c79cb49de28
+0c79cb49de28
+PS C:\Program Files\Docker\Docker&gt; docker ps
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
+6e157746978d   ubuntu    &quot;/bin/bash&quot;   37 minutes ago   Up 19 minutes             elated_galois
+
+# 将本地主机上的MySQL拷贝到docker容器
+#docker cp 本地文件路径 容器名字：容器路径
+C:\Users\MB248&gt;docker cp ‪F:\mysql-5.7.27-winx64.zip ica:/usr/local/mysql
+copying between containers is not supported #报错：不允许使用绝对路径 ，只能是相对路径
+
+F:\&gt;docker cp mysql-5.7.27-winx64.zip ica:/usr/local/mysql
+
+#查看容器具体的信息
+docker inspect mysql5.7
+</code></pre><h3 id="构建web应用程序"><a class="anchor" href="#构建web应用程序">#</a> 构建 Web 应用程序</h3><pre><code class="language-cmd">#从docker官网下载一个  Python Flask 应用
+PS C:\Program Files\Docker\Docker&gt; docker pull training/webapp
+Using default tag: latest
+latest: Pulling from training/webapp
+Image docker.io/training/webapp:latest uses outdated schema1 manifest format. Please upgrade to a schema2 image for better future compatibility. More information at https://docs.docker.com/registry/spec/deprecated-schema-v1/
+e190868d63f8: Pull complete                                                                                             
+909cd34c6fd7: Pull complete                               
+0b9bfabab7c1: Pull complete                                                                                             
+a3ed95caeb02: Pull complete                               
+10bbbc0fc0ff: Pull complete                                                                                             
+fca59b508e9f: Pull complete                                   
+e7ae2541b15b: Pull complete                                                                                            
+9dd97ef58ce9: Pull complete                               
+4c1b0cb7af7: Pull complete                                                                                             
+Digest: sha256:06e9c1983bd6d5db5fba376ccd63bfa529e8d02f23d5079b8f74a616308fb11d
+Status: Downloaded newer image for training/webapp:latest
+docker.io/training/webapp:latest
+
+#运行以上下载的应用。-d:让容器在后台运行；-P:将容器内部使用的网络端口随机映射到我们使用的主机上
+PS C:\Program Files\Docker\Docker&gt; docker run -d -P training/webapp python app.py
+e9213a62eee7b6895484d8c86977571aa7ac180bee91eefc060407fddb7d9f8b
+
+#可以看到，Docker 开放了 5000 端口（默认 Python Flask 端口）映射到主机端口 49153上
+PS C:\Program Files\Docker\Docker&gt; docker ps
+CONTAINER ID   IMAGE             COMMAND           CREATED              STATUS              PORTS                     NAMES
+e9213a62eee7   training/webapp   &quot;python app.py&quot;   About a minute ago   Up About a minute   0.0.0.0:49153-&gt;5000/tcp   recursing_curie
+6e157746978d   ubuntu            &quot;/bin/bash&quot;       2 hours ago          Up 2 hours                                    elated_galois
+
+#也可以通过 -p 参数来设置不一样的端口。例如容器内部的 5000 端口映射到我们本地主机的 5000 端口上，也可以同时指定主机 -p 127.0.0.1:5000:5000，默认是localhost
+PS C:\Program Files\Docker\Docker&gt; docker run -d -p 5000:5000 training/webapp python app.py
+53584b58cb72657b95063d44f7e869a13716677f49cba8b113db8921d9c8293c
+PS C:\Program Files\Docker\Docker&gt; docker ps
+CONTAINER ID   IMAGE             COMMAND           CREATED         STATUS         PORTS                     NAMES
+53584b58cb72   training/webapp   &quot;python app.py&quot;   8 seconds ago   Up 5 seconds   0.0.0.0:5000-&gt;5000/tcp    vibrant_lovelace
+e9213a62eee7   training/webapp   &quot;python app.py&quot;   9 minutes ago   Up 9 minutes   0.0.0.0:49153-&gt;5000/tcp   recursing_curie
+6e157746978d   ubuntu            &quot;/bin/bash&quot;       2 hours ago     Up 2 hours                               elated_galois
+
+</code></pre><p>此时通过浏览器访问：<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0OTE1My8=">http://localhost:49153/</span></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/image-20210317132817670.png" alt="image-20210317132817670"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/image-20210317133124108.png" alt="image-20210317133124108"></p><pre><code class="language-cmd">#使用 docker port 可以查看指定 （ID 或者名字）容器的某个确定端口映射到宿主机的端口号
+PS C:\Program Files\Docker\Docker&gt; docker port 53584b58cb72
+5000/tcp -&gt; 0.0.0.0:5000
+PS C:\Program Files\Docker\Docker&gt; docker port vibrant_lovelace
+5000/tcp -&gt; 0.0.0.0:5000
+
+#docker logs [ID或者名字] 可以查看容器内部的标准输出。-f: 让 docker logs 像使用 tail -f 一样来输出容器内部的标准输出
+PS C:\Program Files\Docker\Docker&gt; docker logs -f 53584b58cb72
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+172.17.0.1 - - [17/Mar/2021 05:31:17] &quot;GET / HTTP/1.1&quot; 200 -
+172.17.0.1 - - [17/Mar/2021 05:31:17] &quot;GET /favicon.ico HTTP/1.1&quot; 404 -
+
+#使用 docker top 来查看容器内部运行的进程
+PS C:\Program Files\Docker\Docker&gt; docker top 53584b58cb72
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                2935                2915                0                   05:30               ?                   00:00:01            python app.py
+PS C:\Program Files\Docker\Docker&gt; docker top vibrant_lovelace
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                2935                2915                0                   05:30               ?                   00:00:01            python app.py
+
+#使用 docker inspect 来查看 Docker 的底层信息。它会返回一个 JSON 文件记录着 Docker 容器的配置和状态信息。
+PS C:\Program Files\Docker\Docker&gt; docker inspect vibrant_lovelace
+[
+    &#123;
+        &quot;Id&quot;: &quot;53584b58cb72657b95063d44f7e869a13716677f49cba8b113db8921d9c8293c&quot;,
+        &quot;Created&quot;: &quot;2021-03-17T05:30:08.4304396Z&quot;,
+        &quot;Path&quot;: &quot;python&quot;,
+        &quot;Args&quot;: [
+            &quot;app.py&quot;
+        ],
+        &quot;State&quot;: &#123;
+            &quot;Status&quot;: &quot;running&quot;,
+            &quot;Running&quot;: true,
+            &quot;Paused&quot;: false,
+            &quot;Restarting&quot;: false,
+            &quot;OOMKilled&quot;: false,
+            &quot;Dead&quot;: false,
+            &quot;Pid&quot;: 2935,
+            &quot;ExitCode&quot;: 0,
+            &quot;Error&quot;: &quot;&quot;,
+            &quot;StartedAt&quot;: &quot;2021-03-17T05:30:10.5380885Z&quot;,
+            &quot;FinishedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;
+        &#125;,
+        &quot;Image&quot;: &quot;sha256:6fae60ef344644649a39240b94d73b8ba9c67f898ede85cf8e947a887b3e6557&quot;,
+        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/53584b58cb72657b95063d44f7e869a13716677f49cba8b113db8921d9c8293c/resolv.conf&quot;,
+        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/53584b58cb72657b95063d44f7e869a13716677f49cba8b113db8921d9c8293c/hostname&quot;,
+        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/53584b58cb72657b95063d44f7e869a13716677f49cba8b113db8921d9c8293c/hosts&quot;,
+        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/53584b58cb72657b95063d44f7e869a13716677f49cba8b113db8921d9c8293c/53584b58cb72657b95063d44f7e869a13716677f49cba8b113db8921d9c8293c-json.log&quot;,
+        &quot;Name&quot;: &quot;/vibrant_lovelace&quot;,
+        ......
+        
+        
+        #docker ps -l 查询最后一次创建的容器
+        PS C:\Program Files\Docker\Docker&gt; docker ps -l
+CONTAINER ID   IMAGE             COMMAND           CREATED          STATUS          PORTS                    NAMES
+53584b58cb72   training/webapp   &quot;python app.py&quot;   16 minutes ago   Up 16 minutes   0.0.0.0:5000-&gt;5000/tcp   vibrant_lovelace
+
+#我们可以使用 docker rm 命令来删除不需要的容器.删除容器时，容器必须是停止状态，否则会报错
+PS C:\Program Files\Docker\Docker&gt; docker stop e9213a62eee7
+e9213a62eee7
+PS C:\Program Files\Docker\Docker&gt; docker rm e9213a62eee7
+e9213a62eee7
+
+</code></pre><h3 id="docker镜像使用"><a class="anchor" href="#docker镜像使用">#</a> docker 镜像使用</h3><p>当运行容器时，使用的镜像如果在本地中不存在，docker 就会自动从 docker 镜像仓库中下载，默认是从 Docker Hub 公共镜像源下载。<a href="**https://hub.docker.com/**">Dokcer Hub</a></p><p>同一仓库源可以有多个 TAG，代表这个仓库源的不同个版本，如 ubuntu 仓库源里，有 15.10、14.04 等多个不同的版本，我们使用 REPOSITORY:TAG 来定义不同的镜像。<br>所以，我们如果要使用版本为 15.10 的 ubuntu 系统镜像来运行容器时，docker run -t -i ubuntu:15.10 /bin/bash。<br>如果你不指定一个镜像的版本标签，例如你只使用 ubuntu，docker 将默认使用 ubuntu:latest 镜像。</p><pre><code class="language-cmd">#查看本地主机上的镜像。REPOSITORY：表示镜像的仓库源；TAG：镜像的标签；IMAGE ID：镜像ID；CREATED：镜像创建时间；SIZE：镜像大小
+PS C:\Program Files\Docker\Docker&gt; docker images                                                                                                                                     REPOSITORY        TAG       IMAGE ID       CREATED       SIZE
+hello-world       latest    d1165f221234   11 days ago   13.3kB
+ubuntu            latest    4dd97cefde62   13 days ago   72.9MB
+training/webapp   latest    6fae60ef3446   5 years ago   349MB
+
+#查找镜像。NAME: 镜像仓库源的名称；DESCRIPTION: 镜像的描述；OFFICIAL: 是否 docker 官方发布；stars: 类似 Github 里面的 star，表示点赞、喜欢的意思；AUTOMATED: 自动构建
+PS C:\Program Files\Docker\Docker&gt; docker search mysql                                                                                                                                                                                                                         NAME                              DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+mysql                             MySQL is a widely used, open-source relation…   10624     [OK]
+mariadb                           MariaDB Server is a high performing open sou…   3980      [OK]
+mysql/mysql-server                Optimized MySQL Server Docker images. Create…   779                  [OK]
+percona                           Percona Server is a fork of the MySQL relati…   528       [OK]
+centos/mysql-57-centos7           MySQL 5.7 SQL database server                   87
+mysql/mysql-cluster               Experimental MySQL Cluster Docker images. Cr…   79
+centurylink/mysql                 Image containing mysql. Optimized to be link…   59                   [OK]
+bitnami/mysql                     Bitnami MySQL Docker Image                      49                   [OK]
+deitch/mysql-backup               REPLACED! Please use http://hub.docker.com/r…   41                   [OK]
+databack/mysql-backup             Back up mysql databases to... anywhere!         40
+prom/mysqld-exporter                                                              37                   [OK]
+tutum/mysql                       Base docker image to run a MySQL database se…   35
+schickling/mysql-backup-s3        Backup MySQL to S3 (supports periodic backup…   29                   [OK]
+linuxserver/mysql                 A Mysql container, brought to you by LinuxSe…   27
+centos/mysql-56-centos7           MySQL 5.6 SQL database server                   20
+circleci/mysql                    MySQL is a widely used, open-source relation…   20
+mysql/mysql-router                MySQL Router provides transparent routing be…   18
+arey/mysql-client                 Run a MySQL client from a docker container      17                   [OK]
+fradelg/mysql-cron-backup         MySQL/MariaDB database backup using cron tas…   12                   [OK]
+openshift/mysql-55-centos7        DEPRECATED: A Centos7 based MySQL v5.5 image…   6
+devilbox/mysql                    Retagged MySQL, MariaDB and PerconaDB offici…   3
+ansibleplaybookbundle/mysql-apb   An APB which deploys RHSCL MySQL                2                    [OK]
+jelastic/mysql                    An image of the MySQL database server mainta…   1
+widdpim/mysql-client              Dockerized MySQL Client (5.7) including Curl…   1                    [OK]
+monasca/mysql-init                A minimal decoupled init container for mysql    0
+
+#镜像删除使用 docker rmi
+PS C:\Program Files\Docker\Docker&gt; docker rmi hello-world                                                                                                                         Untagged: hello-world:latest
+Untagged: hello-world@sha256:308866a43596e83578c7dfa15e27a73011bdd402185a84c5cd7f32a88b501a24
+Deleted: sha256:d1165f2212346b2bab48cb01c1e39ee8ad1be46b87873d9ca7a4e434980a7726
+Deleted: sha256:f22b99068db93900abe17f7f5e09ec775c2826ecfe9db961fea68293744144bd
+
+
+PS C:\Program Files\Docker\Docker&gt; docker ps                                                                                                                                             CONTAINER ID   IMAGE             COMMAND           CREATED          STATUS          PORTS                    NAMES
+53584b58cb72   training/webapp   &quot;python app.py&quot;   47 minutes ago   Up 47 minutes   0.0.0.0:5000-&gt;5000/tcp   vibrant_lovelace
+6e157746978d   ubuntu            &quot;/bin/bash&quot;       3 hours ago      Up 3 hours
+#更新镜像，进入正在运行的6e157746978d容器的镜像
+PS C:\Program Files\Docker\Docker&gt; docker exec -it 6e157746978d /bin/bash                                                                                           root@6e157746978d:/# apt-get update  #执行更新命令
+Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [21.6 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [683 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [187 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [681 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [220 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1089 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [938 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [29.6 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4305 B]
+Fetched 17.3 MB in 1min 32s (187 kB/s)
+Reading package lists... Done
+root@6e157746978d:/# exit
+exit
+
+#提交以上更新的镜像。-m: 提交的描述信息；-a: 指定镜像作者；6e157746978d容器ID；ubuntu:v2 指定要创建的目标镜像名
+PS C:\Program Files\Docker\Docker&gt; docker commit -m=&quot;update ubuntu&quot; -a=&quot;fan&quot; 6e157746978d ubuntu:v2                                                                                                                                                                           sha256:8c50166951beb5f83bc6063e0dcaca654df0a2550f07f8e65531c1b2f34ed2ca
+PS C:\Program Files\Docker\Docker&gt; docker images                                                                                                                                     REPOSITORY        TAG       IMAGE ID       CREATED          SIZE
+ubuntu            v2        8c50166951be   16 seconds ago   100MB
+ubuntu            latest    4dd97cefde62   13 days ago      72.9MB
+training/webapp   latest    6fae60ef3446   5 years ago      349MB
+
+#设置镜像标签。  docker tag  镜像ID  用户名称/镜像源名:标签名
+PS C:\Program Files\Docker\Docker&gt; docker tag 6fae60ef3446 python_app:test                                                                                           PS C:\Program Files\Docker\Docker&gt; docker images                                                                                                                                     REPOSITORY        TAG       IMAGE ID       CREATED          SIZE
+ubuntu            v2        8c50166951be   11 minutes ago   100MB
+ubuntu            latest    4dd97cefde62   13 days ago      72.9MB
+python_app        latest    6fae60ef3446   5 years ago      349MB
+python_app        test      6fae60ef3446   5 years ago      349MB
+training/webapp   latest    6fae60ef3446   5 years ago      349MB
+</code></pre><h3 id="构建镜像"><a class="anchor" href="#构建镜像">#</a> 构建镜像</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWltYWdlLXVzYWdlLmh0bWw=">参考</span></p><p>使用命令 <strong>docker build</strong> ， 从零开始来创建一个新的镜像。为此，我们需要创建一个 Dockerfile 文件，其中包含一组指令来告诉 Docker 如何构建我们的镜像。</p><pre><code>runoob@runoob:~$ cat Dockerfile 
+FROM    centos:6.7
+MAINTAINER      Fisher &quot;fisher@sudops.com&quot;
+
+RUN     /bin/echo 'root:123456' |chpasswd
+RUN     useradd runoob
+RUN     /bin/echo 'runoob:123456' |chpasswd
+RUN     /bin/echo -e &quot;LANG=\&quot;en_US.UTF-8\&quot;&quot; &gt;/etc/default/local
+EXPOSE  22
+EXPOSE  80
+CMD     /usr/sbin/sshd -D
+</code></pre><p>每一个指令都会在镜像上创建一个新的层，每一个指令的前缀都必须是大写的。</p><p>第一条 FROM，指定使用哪个镜像源。</p><p>RUN 指令告诉 docker 在镜像内执行命令，安装了什么。</p><p>然后，我们使用 Dockerfile 文件，通过 docker build 命令来构建一个镜像。</p><pre><code>runoob@runoob:~$ docker build -t runoob/centos:6.7 .
+Sending build context to Docker daemon 17.92 kB
+Step 1 : FROM centos:6.7
+ ---&amp;gt; d95b5ca17cc3
+Step 2 : MAINTAINER Fisher &quot;fisher@sudops.com&quot;
+ ---&amp;gt; Using cache
+ ---&amp;gt; 0c92299c6f03
+Step 3 : RUN /bin/echo 'root:123456' |chpasswd
+ ---&amp;gt; Using cache
+ ---&amp;gt; 0397ce2fbd0a
+Step 4 : RUN useradd runoob
+......
+</code></pre><p>参数说明：</p><ul><li><strong>-t</strong> ：指定要创建的目标镜像名</li><li><strong>.</strong> ：Dockerfile 文件所在目录，可以指定 Dockerfile 的绝对路径</li></ul><h3 id="docker容器互联"><a class="anchor" href="#docker容器互联">#</a> docker 容器互联</h3><p>端口映射并不是唯一把 docker 连接到另一个容器的方法。docker 有一个连接系统允许将多个容器连接在一起，共享连接信息。docker 连接会创建一个父子关系，其中父容器可以看到子容器的信息。</p><pre><code class="language-cmd">#创建新的docker网络 test_net 。-d：参数指定 Docker 网络类型，有 bridge、overlay
+PS C:\Program Files\Docker\Docker&gt; docker network create -d bridge test_net                                                                                           d0fcaf9cb805999e884f4bb3feaa1382a64294eb4774df70b57c8e76408b5b06
+
+#用ubuntu镜像创建一个新的容器并连接到 网络 test_net 
+PS C:\Program Files\Docker\Docker&gt; docker run -itd --name test1 --network test_net ubuntu /bin/bash                                                   a0123cee1f0c05bbd2d29fdc602f74ce0e20188af28544423103b81d12d0115a
+
+#进入容器
+PS C:\Program Files\Docker\Docker&gt; docker exec -it test1 /bin/bash  
+
+root@a0123cee1f0c:/# apt-get update #执行更新
+Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [681 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [683 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [187 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [21.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1089 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [29.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [938 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [220 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4305 B]
+Fetched 17.3 MB in 1min 30s (191 kB/s)
+Reading package lists... Done
+root@a0123cee1f0c:/# apt install iputils-ping  #安装ping
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libcap2 libcap2-bin libpam-cap
+The following NEW packages will be installed:
+  iputils-ping libcap2 libcap2-bin libpam-cap
+0 upgraded, 4 newly installed, 0 to remove and 1 not upgraded.
+Need to get 90.5 kB of archives.
+After this operation, 333 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libcap2 amd64 1:2.32-1 [15.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 libcap2-bin amd64 1:2.32-1 [26.2 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 iputils-ping amd64 3:20190709-3 [40.1 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libpam-cap amd64 1:2.32-1 [8352 B]
+Fetched 90.5 kB in 2s (38.0 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcap2:amd64.
+(Reading database ... 4121 files and directories currently installed.)
+Preparing to unpack .../libcap2_1%3a2.32-1_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.32-1) ...
+Selecting previously unselected package libcap2-bin.
+Preparing to unpack .../libcap2-bin_1%3a2.32-1_amd64.deb ...
+Unpacking libcap2-bin (1:2.32-1) ...
+Selecting previously unselected package iputils-ping.
+Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
+Unpacking iputils-ping (3:20190709-3) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../libpam-cap_1%3a2.32-1_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.32-1) ...
+Setting up libcap2:amd64 (1:2.32-1) ...
+Setting up libcap2-bin (1:2.32-1) ...
+Setting up libpam-cap:amd64 (1:2.32-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up iputils-ping (3:20190709-3) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+root@a0123cee1f0c:/# ping test2   #ping 容器test2
+PING test2 (172.18.0.3) 56(84) bytes of data.
+64 bytes from test2.test_net (172.18.0.3): icmp_seq=1 ttl=64 time=0.577 ms
+64 bytes from test2.test_net (172.18.0.3): icmp_seq=2 ttl=64 time=0.046 ms
+64 bytes from test2.test_net (172.18.0.3): icmp_seq=3 ttl=64 time=0.046 ms
+64 bytes from test2.test_net (172.18.0.3): icmp_seq=4 ttl=64 time=0.085 ms
+64 bytes from test2.test_net (172.18.0.3): icmp_seq=5 ttl=64 time=0.114 ms
+64 bytes from test2.test_net (172.18.0.3): icmp_seq=6 ttl=64 time=0.066 ms
+64 bytes from test2.test_net (172.18.0.3): icmp_seq=7 ttl=64 time=0.082 ms
+^C #ctrl c结束
+--- test2 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6174ms
+rtt min/avg/max/mdev = 0.046/0.145/0.577/0.177 ms
+</code></pre><pre><code class="language-cmd">#新开一个终端，用ubuntu镜像创建一个新的容器并连接到 网络 test_net 
+PS C:\Program Files\Docker\Docker&gt; docker run -itd --name test2 --network test_net ubuntu /bin/bash                     bfbcbadae4ee26af5ec759f4835080418d7b61fb42dc612056f652a5e74e3d65
+
+#进入容器
+PS C:\Program Files\Docker\Docker&gt; docker exec -it test2 /bin/bash   
+root@bfbcbadae4ee:/# apt-get update
+Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [187 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [683 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [681 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [21.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [220 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [29.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1089 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [938 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4305 B]
+Fetched 17.3 MB in 1min 26s (201 kB/s)
+Reading package lists... Done
+root@bfbcbadae4ee:/# apt install iputils-ping
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libcap2 libcap2-bin libpam-cap
+The following NEW packages will be installed:
+  iputils-ping libcap2 libcap2-bin libpam-cap
+0 upgraded, 4 newly installed, 0 to remove and 1 not upgraded.
+Need to get 90.5 kB of archives.
+Selecting previously unselected package libcap2:amd64.will be used.
+(Reading database ... 4121 files and directories currently installed.)
+Preparing to unpack .../libcap2_1%3a2.32-1_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.32-1) ...
+Selecting previously unselected package libcap2-bin.
+Preparing to unpack .../libcap2-bin_1%3a2.32-1_amd64.deb ...
+Unpacking libcap2-bin (1:2.32-1) ...
+Selecting previously unselected package iputils-ping.
+Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
+Unpacking iputils-ping (3:20190709-3) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../libpam-cap_1%3a2.32-1_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.32-1) ...
+Setting up libcap2:amd64 (1:2.32-1) ...
+Setting up libcap2-bin (1:2.32-1) ...
+Setting up libpam-cap:amd64 (1:2.32-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up iputils-ping (3:20190709-3) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+PING test1 (172.18.0.2) 56(84) bytes of data.
+64 bytes from test1.test_net (172.18.0.2): icmp_seq=1 ttl=64 time=0.443 ms
+64 bytes from test1.test_net (172.18.0.2): icmp_seq=2 ttl=64 time=0.147 ms
+64 bytes from test1.test_net (172.18.0.2): icmp_seq=3 ttl=64 time=0.098 ms
+^C
+--- test1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2017ms
+rtt min/avg/max/mdev = 0.098/0.229/0.443/0.152 ms
+root@bfbcbadae4ee:/#
+</code></pre><h3 id="dokcer仓库"><a class="anchor" href="#dokcer仓库">#</a> dokcer 仓库</h3><p>仓库（Repository）是集中存放镜像的地方，目前 Docker 官方维护了一个公共仓库 <span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS8=">Docker Hub</span>，大部分需求都可以通过在 Docker Hub 中直接下载镜像来实现。可以在 <span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS8=">https://hub.docker.com</span> 免费注册一个 Docker 账号，然后就可以拉去自己账号下的全部镜像或上传镜像到自己的账号下。</p><pre><code class="language-cmd">PS C:\Program Files\Docker\Docker&gt; docker login                                                                                                                                         Authenticating with existing credentials...
+Login did not succeed, error: Error response from daemon: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username (yuan199696): docker1996
+Password:
+Login Succeeded
+
+#将tag为latest的ubuntu镜像重新命名为 yuan199696/ubuntu，且tag重新命名为fan。yuan199696是我的账号
+PS C:\Program Files\Docker\Docker&gt; docker tag ubuntu:latest yuan199696/ubuntu:fan                                                                             PS C:\Program Files\Docker\Docker&gt; docker images                                                                                                                                     REPOSITORY          TAG       IMAGE ID       CREATED             SIZE
+ubuntu              v2        8c50166951be   About an hour ago   100MB
+yuan199696/ubuntu   fan       4dd97cefde62   13 days ago         72.9MB
+ubuntu              latest    4dd97cefde62   13 days ago         72.9MB
+python_app          test      6fae60ef3446   5 years ago         349MB
+training/webapp     latest    6fae60ef3446   5 years ago         349MB
+
+#将tag为fan的镜像yuan199696/ubuntu推送到自己的远程仓库
+PS C:\Program Files\Docker\Docker&gt; docker push yuan199696/ubuntu:fan                                                                                                 The push refers to repository [docker.io/yuan199696/ubuntu]
+c20d459170d8: Mounted from library/ubuntu                                                                                                                                                 b978cae6a05: Mounted from library/ubuntu                                                                                                                                                   aeb3f02e9374: Mounted from library/ubuntu                                                                                                                                                  fan: digest: sha256:e3d7ff9efd8431d9ef39a144c45992df5502c995b9ba3c53ff70c5b52a848d9c size: 943
+
+PS C:\Program Files\Docker\Docker&gt; docker search yuan199696/ubuntu                                                                                                     NAME      DESCRIPTION   STARS     OFFICIAL   AUTOMATED
+</code></pre><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/image-20210317155153525.png" alt="image-20210317155153525"></p><h3 id="dockerfile"><a class="anchor" href="#dockerfile">#</a> dockerfile</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWRvY2tlcmZpbGUuaHRtbA==">参考</span></p><h2 id="docker命令"><a class="anchor" href="#docker命令">#</a> docker 命令</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWNvbW1hbmQtbWFudWFsLmh0bWw=">菜鸟教程</span></p><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL3JlZmVyZW5jZS9jb21tYW5kbGluZS9ydW4v">docker 官网</span></p><h3 id="容器生命周期管理"><a class="anchor" href="#容器生命周期管理">#</a> 容器生命周期管理</h3><ul><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXJ1bi1jb21tYW5kLmh0bWw=">run</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXN0YXJ0LXN0b3AtcmVzdGFydC1jb21tYW5kLmh0bWw=">start/stop/restart</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWtpbGwtY29tbWFuZC5odG1s">kill</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXJtLWNvbW1hbmQuaHRtbA==">rm</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXBhdXNlLXVucGF1c2UtY29tbWFuZC5odG1s">pause/unpause</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWNyZWF0ZS1jb21tYW5kLmh0bWw=">create</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWV4ZWMtY29tbWFuZC5odG1s">exec</span></li></ul><h3 id="容器操作"><a class="anchor" href="#容器操作">#</a> 容器操作</h3><ul><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXBzLWNvbW1hbmQuaHRtbA==">ps</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWluc3BlY3QtY29tbWFuZC5odG1s">inspect</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXRvcC1jb21tYW5kLmh0bWw=">top</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWF0dGFjaC1jb21tYW5kLmh0bWw=">attach</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWV2ZW50cy1jb21tYW5kLmh0bWw=">events</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWxvZ3MtY29tbWFuZC5odG1s">logs</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXdhaXQtY29tbWFuZC5odG1s">wait</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWV4cG9ydC1jb21tYW5kLmh0bWw=">export</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXBvcnQtY29tbWFuZC5odG1s">port</span></li></ul><h3 id="容器rootfs命令"><a class="anchor" href="#容器rootfs命令">#</a> 容器 rootfs 命令</h3><ul><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWNvbW1pdC1jb21tYW5kLmh0bWw=">commit</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWNwLWNvbW1hbmQuaHRtbA==">cp</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWRpZmYtY29tbWFuZC5odG1s">diff</span></li></ul><h3 id="镜像仓库"><a class="anchor" href="#镜像仓库">#</a> 镜像仓库</h3><ul><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWxvZ2luLWNvbW1hbmQuaHRtbA==">login</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXB1bGwtY29tbWFuZC5odG1s">pull</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXB1c2gtY29tbWFuZC5odG1s">push</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXNlYXJjaC1jb21tYW5kLmh0bWw=">search</span></li></ul><h3 id="本地镜像管理"><a class="anchor" href="#本地镜像管理">#</a> 本地镜像管理</h3><ul><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWltYWdlcy1jb21tYW5kLmh0bWw=">images</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXJtaS1jb21tYW5kLmh0bWw=">rmi</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXRhZy1jb21tYW5kLmh0bWw=">tag</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWJ1aWxkLWNvbW1hbmQuaHRtbA==">build</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWhpc3RvcnktY29tbWFuZC5odG1s">history</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXNhdmUtY29tbWFuZC5odG1s">save</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWxvYWQtY29tbWFuZC5odG1s">load</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWltcG9ydC1jb21tYW5kLmh0bWw=">import</span></li></ul><h3 id="infoversion"><a class="anchor" href="#infoversion">#</a> info|version</h3><ul><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLWluZm8tY29tbWFuZC5odG1s">info</span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXZlcnNpb24tY29tbWFuZC5odG1s">version</span></li></ul><h2 id="docker资源"><a class="anchor" href="#docker资源">#</a> docker 资源</h2><p>来源于<span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9kb2NrZXIvZG9ja2VyLXJlc291cmNlcy5odG1s">菜鸟教程</span></p><h3 id="docker-资源"><a class="anchor" href="#docker-资源">#</a> Docker 资源</h3><ul><li>Docker 官方主页: <span class="exturl" data-url="aHR0cHM6Ly93d3cuZG9ja2VyLmNvbS8=">https://www.docker.com</span></li><li>Docker 官方博客: <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmRvY2tlci5jb20v">https://blog.docker.com/</span></li><li>Docker 官方文档: <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20v">https://docs.docker.com/</span></li><li>Docker Store: <span class="exturl" data-url="aHR0cHM6Ly9zdG9yZS5kb2NrZXIuY29tLw==">https://store.docker.com</span></li><li>Docker Cloud: <span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5kb2NrZXIuY29tLw==">https://cloud.docker.com</span></li><li>Docker Hub: <span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS8=">https://hub.docker.com</span></li><li>Docker 的源代码仓库: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21vYnkvbW9ieQ==">https://github.com/moby/moby</span></li><li>Docker 发布版本历史: <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vcmVsZWFzZS1ub3Rlcy8=">https://docs.docker.com/release-notes/</span></li><li>Docker 常见问题: <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL2ZhcS8=">https://docs.docker.com/engine/faq/</span></li><li>Docker 远端应用 API: <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZGV2ZWxvcC9zZGsv">https://docs.docker.com/develop/sdk/</span></li></ul><h3 id="docker-国内镜像"><a class="anchor" href="#docker-国内镜像">#</a> Docker 国内镜像</h3><p>阿里云的加速器：<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vZG9jdW1lbnRfZGV0YWlsLzYwNzUwLmh0bWw=">https://help.aliyun.com/document_detail/60750.html</span></p><p>网易加速器：<span class="exturl" data-url="aHR0cDovL2h1Yi1taXJyb3IuYy4xNjMuY29t">http://hub-mirror.c.163.com</span></p><p>官方中国加速器：<span class="exturl" data-url="aHR0cHM6Ly9yZWdpc3RyeS5kb2NrZXItY24uY29t">https://registry.docker-cn.com</span></p><p>ustc 的镜像：<span class="exturl" data-url="aHR0cHM6Ly9kb2NrZXIubWlycm9ycy51c3RjLmVkdS5jbg==">https://docker.mirrors.ustc.edu.cn</span></p><p>daocloud：<span class="exturl" data-url="aHR0cHM6Ly93d3cuZGFvY2xvdWQuaW8vbWlycm9yI2FjY2VsZXJhdG9yLWRvYyVFRiVCQyU4OCVFNiVCMyVBOCVFNSU4NiU4QyVFNSU5MCU4RSVFNCVCRCVCRiVFNyU5NCVBOCVFRiVCQyU4OQ==">https://www.daocloud.io/mirror#accelerator-doc（注册后使用）</span></p><h2 id="docker镜像目录更改"><a class="anchor" href="#docker镜像目录更改">#</a> docker 镜像目录更改</h2><p>docker 镜像文件默认存放在 c 盘下，由于 c 盘空间有限，所以需要将镜像文件目录更改到其它盘符下</p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veWFuZ2xhbmcvcC8xMzUxODQ0OS5odG1s">参考</span></p><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L09uZWRheUlsb3ZlL2FydGljbGUvZGV0YWlscy8xMDA1NTY1NTU=">参考</span></p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veGh6bmwvcC8xMzE4NDM5OC5odG1s">参考</span></p><pre><code class="language-cmd">PS C:\Program Files\Docker\Docker&gt; wsl -l --all -v                                                                                                                                         NAME                   STATE           VERSION
+* Ubuntu                 Running         2
+  docker-desktop         Running         2
+  docker-desktop-data    Stopped         2
+PS C:\Program Files\Docker\Docker&gt; wsl --shutdown                                                                                                                                     PS C:\Program Files\Docker\Docker&gt; wsl --export docker-desktop-data E:\docker-desktop\docker-desktop-data.tar                               PS C:\Program Files\Docker\Docker&gt; wsl --unregister docker-desktop-data                                                                                                 正在注销...
+PS C:\Program Files\Docker\Docker&gt; wsl --import docker-desktop-data E:\docker-desktop\data E:\docker-desktop\docker-desktop-data.tar --version 2
+
+#重启docker desktop后，如果无法连接，那么重新启动计算机
+</code></pre><div class="tags"><a href="/tags/Java/" rel="tag"><i class="ic i-tag"></i> Java</a> <a href="/tags/Docker/" rel="tag"><i class="ic i-tag"></i> Docker</a> <a href="/tags/WSL/" rel="tag"><i class="ic i-tag"></i> WSL</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2021-12-24 10:53:19" itemprop="dateModified" datetime="2021-12-24T10:53:19+08:00">2021-12-24</time> </span><span id="/Win10安装docker" class="item leancloud_visitors" data-flag-title="Win10安装docker" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="fanfanfan 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="fanfanfan 支付宝"><p>支付宝</p></div><div><img data-src="/images/paypal.png" alt="fanfanfan PayPal"><p>PayPal</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>fanfanfan <i class="ic i-at"><em>@</em></i>书院十四先生</li><li class="link"><strong>本文链接：</strong> <a href="https://www.baiyezi.vip/Win10%E5%AE%89%E8%A3%85docker" title="Win10安装docker">https://www.baiyezi.vip/Win10安装docker</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/%E5%AE%B9%E5%99%A8%E4%B8%8E%E7%BA%BF%E7%A8%8B%E6%B1%A0" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfb3vzhj20zk0m8wny.jpg" title="容器与线程池"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> Java</span><h3>容器与线程池</h3></a></div><div class="item right"><a href="/Win10%E5%AE%89%E8%A3%85docker" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevgoki5j20zk0m84qp.jpg" title="Win10安装docker"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i> Java</span><h3>Win10安装docker</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#wsl%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">WSL 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#wsl%E7%9B%AE%E5%BD%95%E6%9B%B4%E6%94%B9"><span class="toc-number">1.1.</span> <span class="toc-text">WSL 目录更改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">docker 使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="toc-number">2.1.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E5%BB%BAweb%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">2.2.</span> <span class="toc-text">构建 Web 应用程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8"><span class="toc-number">2.3.</span> <span class="toc-text">docker 镜像使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F"><span class="toc-number">2.4.</span> <span class="toc-text">构建镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker%E5%AE%B9%E5%99%A8%E4%BA%92%E8%81%94"><span class="toc-number">2.5.</span> <span class="toc-text">docker 容器互联</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dokcer%E4%BB%93%E5%BA%93"><span class="toc-number">2.6.</span> <span class="toc-text">dokcer 仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dockerfile"><span class="toc-number">2.7.</span> <span class="toc-text">dockerfile</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">docker 命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">容器生命周期管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">3.2.</span> <span class="toc-text">容器操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8rootfs%E5%91%BD%E4%BB%A4"><span class="toc-number">3.3.</span> <span class="toc-text">容器 rootfs 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-number">3.4.</span> <span class="toc-text">镜像仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86"><span class="toc-number">3.5.</span> <span class="toc-text">本地镜像管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#infoversion"><span class="toc-number">3.6.</span> <span class="toc-text">info|version</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker%E8%B5%84%E6%BA%90"><span class="toc-number">4.</span> <span class="toc-text">docker 资源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#docker-%E8%B5%84%E6%BA%90"><span class="toc-number">4.1.</span> <span class="toc-text">Docker 资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F"><span class="toc-number">4.2.</span> <span class="toc-text">Docker 国内镜像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker%E9%95%9C%E5%83%8F%E7%9B%AE%E5%BD%95%E6%9B%B4%E6%94%B9"><span class="toc-number">5.</span> <span class="toc-text">docker 镜像目录更改</span></a></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/Linux%E4%B8%8B%E5%AE%89%E8%A3%85MySQL" rel="bookmark" title="Linux下安装MySQL">Linux下安装MySQL</a></li><li><a href="/MySQL%E5%9F%BA%E7%A1%80" rel="bookmark" title="MySQL基础">MySQL基础</a></li><li><a href="/IOC%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89" rel="bookmark" title="IOC配置方式（一）">IOC配置方式（一）</a></li><li><a href="/IOC%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89" rel="bookmark" title="IOC配置方式（二）">IOC配置方式（二）</a></li><li><a href="/IOC%E6%B3%A8%E8%A7%A3%E6%96%B9%E5%BC%8F" rel="bookmark" title="IOC注解方式">IOC注解方式</a></li><li><a href="/AOP" rel="bookmark" title="AOP">AOP</a></li><li><a href="/SpringBoot%E5%85%A5%E9%97%A8" rel="bookmark" title="SpringBoot入门">SpringBoot入门</a></li><li><a href="/SpringBoot-Web%E5%BC%80%E5%8F%91" rel="bookmark" title="SpringBoot-Web开发">SpringBoot-Web开发</a></li><li><a href="/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86" rel="bookmark" title="SpringBoot自动装配原理">SpringBoot自动装配原理</a></li><li><a href="/zookeeper%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" rel="bookmark" title="zookeeper搭建及基本概念">zookeeper搭建及基本概念</a></li><li><a href="/zookeeper%E5%8E%9F%E7%90%86" rel="bookmark" title="zookeeper原理">zookeeper原理</a></li><li><a href="/zookeeper%E6%A1%88%E4%BE%8B" rel="bookmark" title="zookeeper案例">zookeeper案例</a></li><li><a href="/MySQL%E8%B0%83%E4%BC%98%EF%BC%88%E4%B8%80%EF%BC%89" rel="bookmark" title="MySQL调优（一）">MySQL调优（一）</a></li><li><a href="/redis%E5%AE%89%E8%A3%85%E5%8F%8ANIO%E5%8E%9F%E7%90%86" rel="bookmark" title="redis安装及NIO原理">redis安装及NIO原理</a></li><li><a href="/SpringMVC%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89" rel="bookmark" title="SpringMVC入门（一）">SpringMVC入门（一）</a></li><li><a href="/SpringMVC%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89" rel="bookmark" title="SpringMVC入门（二）">SpringMVC入门（二）</a></li><li><a href="/SpringMVC-REST%E9%A3%8E%E6%A0%BC" rel="bookmark" title="SpringMVC-REST风格">SpringMVC-REST风格</a></li><li><a href="/SpringMVC%E8%BF%9B%E9%98%B6" rel="bookmark" title="SpringMVC进阶">SpringMVC进阶</a></li><li><a href="/SpringMVC%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93" rel="bookmark" title="SpringMVC源码总结">SpringMVC源码总结</a></li><li><a href="/shiro%E5%85%A5%E9%97%A8" rel="bookmark" title="shiro入门">shiro入门</a></li><li><a href="/shiro%E6%95%B4%E5%90%88SpringBoot" rel="bookmark" title="shiro整合SpringBoot">shiro整合SpringBoot</a></li><li><a href="/shiro%E7%9A%84session%E7%AE%A1%E7%90%86" rel="bookmark" title="shiro的session管理">shiro的session管理</a></li><li><a href="/shiro%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E7%99%BB%E5%BD%95" rel="bookmark" title="shiro的缓存机制与分布式登录">shiro的缓存机制与分布式登录</a></li><li><a href="/%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95" rel="bookmark" title="单点登录">单点登录</a></li><li><a href="/%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86" rel="bookmark" title="线程基础知识">线程基础知识</a></li><li><a href="/%E5%AE%B9%E5%99%A8%E4%B8%8E%E7%BA%BF%E7%A8%8B%E6%B1%A0" rel="bookmark" title="容器与线程池">容器与线程池</a></li><li class="active"><a href="/Win10%E5%AE%89%E8%A3%85docker" rel="bookmark" title="Win10安装docker">Win10安装docker</a></li><li class="active"><a href="/Win10%E5%AE%89%E8%A3%85docker" rel="bookmark" title="Win10安装docker">Win10安装docker</a></li><li><a href="/JMH" rel="bookmark" title="JMH">JMH</a></li><li><a href="/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B" rel="bookmark" title="并发编程">并发编程</a></li><li><a href="/java-%E6%97%A5%E5%BF%97%E4%BD%93%E7%B3%BB" rel="bookmark" title="java-日志体系">java-日志体系</a></li><li><a href="/redis%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B" rel="bookmark" title="redis的数据类型">redis的数据类型</a></li><li><a href="/redis%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8" rel="bookmark" title="redis进阶使用">redis进阶使用</a></li><li><a href="/redis%E7%9A%84%E9%9B%86%E7%BE%A4" rel="bookmark" title="redis的集群">redis的集群</a></li><li><a href="/redis%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8" rel="bookmark" title="redis在开发中的简单使用">redis在开发中的简单使用</a></li><li><a href="/Composite%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Composite组合模式">Composite组合模式</a></li><li><a href="/ChainOfResponsibility%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F" rel="bookmark" title="ChainOfResponsibility责任链模式">ChainOfResponsibility责任链模式</a></li><li><a href="/Decorator%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Decorator装饰器模式">Decorator装饰器模式</a></li><li><a href="/Facade%E9%97%A8%E9%9D%A2%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Facade门面模式">Facade门面模式</a></li><li><a href="/Flyweight%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Flyweight享元模式">Flyweight享元模式</a></li><li><a href="/Factory%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Factory工厂模式">Factory工厂模式</a></li><li><a href="/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Iterator迭代器模式">Iterator迭代器模式</a></li><li><a href="/Mediator%E8%B0%83%E5%81%9C%E8%80%85%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Mediator调停者模式">Mediator调停者模式</a></li><li><a href="/Proxy%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Proxy代理模式">Proxy代理模式</a></li><li><a href="/Observer%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Observer观察者模式">Observer观察者模式</a></li><li><a href="/Singleton%E5%8D%95%E4%BE%8B" rel="bookmark" title="Singleton单例">Singleton单例</a></li><li><a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BB%A5%E5%8F%8A%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95" rel="bookmark" title="微服务以及架构发展">微服务以及架构发展</a></li><li><a href="/JVM-%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD" rel="bookmark" title="JVM-类的加载">JVM-类的加载</a></li><li><a href="/SpringCloud-Netflix%E4%BD%93%E7%B3%BB" rel="bookmark" title="SpringCloud-Netflix体系">SpringCloud-Netflix体系</a></li><li><a href="/%E5%BA%8F%E5%88%97%E5%8C%96" rel="bookmark" title="序列化">序列化</a></li><li><a href="/JVM-JMM" rel="bookmark" title="JVM-JMM">JVM-JMM</a></li><li><a href="/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84" rel="bookmark" title="分布式系统与高并发系统架构">分布式系统与高并发系统架构</a></li><li><a href="/JVM-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA" rel="bookmark" title="JVM-对象的创建">JVM-对象的创建</a></li><li><a href="/JVM-JVM%E8%B0%83%E4%BC%98" rel="bookmark" title="JVM-JVM调优">JVM-JVM调优</a></li><li><a href="/JVM-GC" rel="bookmark" title="JVM-GC">JVM-GC</a></li><li><a href="/SpringCloud-Alibaba%E4%BD%93%E7%B3%BB" rel="bookmark" title="SpringCloud-Alibaba体系">SpringCloud-Alibaba体系</a></li><li><a href="/SpringCloud-SpringCloud%E4%BD%93%E7%B3%BB" rel="bookmark" title="SpringCloud-SpringCloud体系">SpringCloud-SpringCloud体系</a></li><li><a href="/Apollo" rel="bookmark" title="Apollo">Apollo</a></li><li><a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89" rel="bookmark" title="微服务中的会话管理（一）">微服务中的会话管理（一）</a></li><li><a href="/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO" rel="bookmark" title="磁盘IO与网络IO">磁盘IO与网络IO</a></li><li><a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89" rel="bookmark" title="微服务中的会话管理（二）">微服务中的会话管理（二）</a></li><li><a href="/HTTPS" rel="bookmark" title="HTTPS">HTTPS</a></li><li><a href="/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5" rel="bookmark" title="RocketMQ-基础概念">RocketMQ-基础概念</a></li><li><a href="/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1" rel="bookmark" title="RocketMQ-消息、事务">RocketMQ-消息、事务</a></li><li><a href="/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84" rel="bookmark" title="Kafka-整体架构">Kafka-整体架构</a></li><li><a href="/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B" rel="bookmark" title="网络IO模型">网络IO模型</a></li><li><a href="/Kafka-%E6%90%AD%E5%BB%BA" rel="bookmark" title="Kafka-搭建">Kafka-搭建</a></li><li><a href="/Netty" rel="bookmark" title="Netty">Netty</a></li><li><a href="/nginx%E5%AE%9E%E6%88%98" rel="bookmark" title="nginx实战">nginx实战</a></li><li><a href="/Java%E5%92%8C%E4%B8%B2%E5%8F%A3%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1" rel="bookmark" title="Java和串口进行通信">Java和串口进行通信</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="fanfanfan" data-src="/images/avatar.png"><p class="name" itemprop="name">fanfanfan</p><div class="description" itemprop="description">花有重开日，人无再少年</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">81</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">6</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">80</span> <span class="name">标签</span></a></div></nav><div class="social"></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>links</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/%E5%AE%B9%E5%99%A8%E4%B8%8E%E7%BA%BF%E7%A8%8B%E6%B1%A0" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/Win10%E5%AE%89%E8%A3%85docker" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/instruments/" title="分类于 工具">工具</a> <i class="ic i-angle-right"></i> <a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/Java%E5%92%8C%E4%B8%B2%E5%8F%A3%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1" title="Java和串口进行通信">Java和串口进行通信</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/SpringMVC%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89" title="SpringMVC入门（二）">SpringMVC入门（二）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/JVM-JVM%E8%B0%83%E4%BC%98" title="JVM-JVM调优">JVM-JVM调优</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86" title="线程基础知识">线程基础知识</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/SpringMVC%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93" title="SpringMVC源码总结">SpringMVC源码总结</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89" title="微服务中的会话管理（一）">微服务中的会话管理（一）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/redis%E5%AE%89%E8%A3%85%E5%8F%8ANIO%E5%8E%9F%E7%90%86" title="redis安装及NIO原理">redis安装及NIO原理</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/Win10%E5%AE%89%E8%A3%85docker" title="Win10安装docker">Win10安装docker</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/JVM-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA" title="JVM-对象的创建">JVM-对象的创建</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95" title="单点登录">单点登录</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; <span itemprop="copyrightYear">2021</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">fanfanfan @ 书院十四先生</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">1.3m 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">20:23</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"/Win10安装docker",favicon:{show:"书院十四先生",hide:"书院十四先生"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script></body></html><!-- rebuild by hrmmi -->

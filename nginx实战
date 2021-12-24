@@ -1,0 +1,906 @@
+<!-- build time:Sat Dec 25 2021 00:02:48 GMT+0800 (中国标准时间) --><!DOCTYPE html><html lang="zh-CN,en,default"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="书院十四先生" href="https://www.baiyezi.vip/rss.xml"><link rel="alternate" type="application/atom+xml" title="书院十四先生" href="https://www.baiyezi.vip/atom.xml"><link rel="alternate" type="application/json" title="书院十四先生" href="https://www.baiyezi.vip/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="Java,Nginx"><link rel="canonical" href="https://www.baiyezi.vip/nginx%E5%AE%9E%E6%88%98"><title>nginx实战 - Java | 书院十四先生</title><meta name="generator" content="Hexo 5.4.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">nginx实战</h1><div class="meta"><span class="item" title="创建时间：2021-09-15 20:12:01"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2021-09-15T20:12:01+08:00">2021-09-15</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>31k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>28 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">书院十四先生</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/java/" itemprop="item" rel="index" title="分类于 Java"><span itemprop="name">Java</span></a><meta itemprop="position" content="1"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://www.baiyezi.vip/nginx%E5%AE%9E%E6%88%98"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.png"><meta itemprop="name" content="fanfanfan"><meta itemprop="description" content=", 花有重开日，人无再少年"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="书院十四先生"></span><div class="body md" itemprop="articleBody"><h2 id="nginx衍生版本"><a class="anchor" href="#nginx衍生版本">#</a> Nginx 衍生版本</h2><p>Nginx plus 商业版 <span class="exturl" data-url="aHR0cHM6Ly93d3cubmdpbnguY29tLw==">https://www.nginx.com/</span></p><p>Nginx 开源版 <span class="exturl" data-url="aHR0cHM6Ly9uZ2lueC5vcmcv">https://nginx.org/</span></p><p>OpenResty</p><p>Tengine</p><h3 id="其他web服务器"><a class="anchor" href="#其他web服务器">#</a> 其他 web 服务器</h3><p>IIS、Apache Httpd1/2、lighttpd</p><h2 id="安装"><a class="anchor" href="#安装">#</a> 安装</h2><p>下载 <span class="exturl" data-url="aHR0cHM6Ly9uZ2lueC5vcmcvZW4vZG93bmxvYWQuaHRtbA==">https://nginx.org/en/download.html</span></p><pre><code class="language-sh">tar -zxvf nginx-1.21.1.tar.gz 
+
+[root@localhost nginx-1.21.1]# ./configure --prefix=/usr/local/nginx
+./configure: error: the HTTP rewrite module requires the PCRE library.
+You can either disable the module by using --without-http_rewrite_module
+option, or install the PCRE library into the system, or build the PCRE library
+statically from the source with nginx by using --with-pcre=&lt;path&gt; option.
+
+# 安装缺失的类库
+[root@localhost nginx-1.21.1]# yum install -y pcre pcre-devel
+#再次安装
+[root@localhost nginx-1.21.1]# ./configure --prefix=/usr/local/nginx
+./configure: error: the HTTP gzip module requires the zlib library.
+You can either disable the module by using --without-http_gzip_module
+option, or install the zlib library into the system, or build the zlib library
+statically from the source with nginx by using --with-zlib=&lt;path&gt; option.
+
+#暗转以上缺失的类库、
+[root@localhost nginx-1.21.1]# yum install -y zlib zlib-devel
+
+#再次安装
+[root@localhost nginx-1.21.1]# ./configure --prefix=/usr/local/nginx
+Configuration summary
+  + using system PCRE library
+  + OpenSSL library is not used
+  + using system zlib library
+
+  nginx path prefix: &quot;/usr/local/nginx&quot;
+  nginx binary file: &quot;/usr/local/nginx/sbin/nginx&quot;
+  nginx modules path: &quot;/usr/local/nginx/modules&quot;
+  nginx configuration prefix: &quot;/usr/local/nginx/conf&quot;
+  nginx configuration file: &quot;/usr/local/nginx/conf/nginx.conf&quot;
+  nginx pid file: &quot;/usr/local/nginx/logs/nginx.pid&quot;
+  nginx error log file: &quot;/usr/local/nginx/logs/error.log&quot;
+  nginx http access log file: &quot;/usr/local/nginx/logs/access.log&quot;
+  nginx http client request body temporary files: &quot;client_body_temp&quot;
+  nginx http proxy temporary files: &quot;proxy_temp&quot;
+  nginx http fastcgi temporary files: &quot;fastcgi_temp&quot;
+  nginx http uwsgi temporary files: &quot;uwsgi_temp&quot;
+  nginx http scgi temporary files: &quot;scgi_temp&quot;
+
+#编译
+[root@localhost nginx-1.21.1]# make
+[root@localhost nginx-1.21.1]# make install
+
+#启动nginx
+[root@localhost nginx-1.21.1]# cd /usr/local/nginx/
+[root@localhost nginx]# ls
+conf  html  logs  sbin
+[root@localhost nginx]# cd sbin/
+[root@localhost sbin]# ls
+nginx
+[root@localhost sbin]# ./nginx 
+
+
+</code></pre><p>需要关闭防火墙或者开启指定端口，之后访问浏览器测试是否安装成功</p><pre><code class="language-sh">#关闭防火墙
+systemctl stop firewalld.service
+#禁止防火墙开机启动
+systemctl disabled firewalld.service
+#将指定端口加入防火墙
+firewall-cmd --zone=public --add-port=80/tcp --permanent 
+#重启防火墙
+firewall-cmd --reload
+</code></pre><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210726214357.png" alt="image-20210726214355029"></p><h3 id="将nginx安装为系统服务"><a class="anchor" href="#将nginx安装为系统服务">#</a> 将 nginx 安装为系统服务</h3><pre><code class="language-sh">[root@localhost ~]# vim /usr/lib/systemd/system/nginx.service
+[Unit]
+Description=nginx - web server
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/usr/local/nginx/logs/nginx.pid
+ExecStartPre=/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf
+ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+ExecReload=/usr/local/nginx/sbin/nginx -s reload
+ExecStop=/usr/local/nginx/sbin/nginx -s stop
+ExecQuit=/usr/local/nginx/sbin/nginx -s quit
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
+#重新加载系统 服务
+[root@localhost ~]# systemctl daemon-reload
+
+#停止nginx服务
+[root@localhost ~]# ps -ef | grep nginx
+root      35548      1  0 05:42 ?        00:00:00 nginx: master process ./nginx
+nobody    35549  35548  0 05:42 ?        00:00:00 nginx: worker process
+root      35844   2300  0 06:12 pts/0    00:00:00 grep --color=auto nginx
+[root@localhost ~]# /usr/local/nginx/sbin/nginx -s stop
+[root@localhost ~]# ps -ef | grep nginx
+root      35863   2300  0 06:13 pts/0    00:00:00 grep --color=auto nginx
+ #使用命令启动
+ [root@localhost ~]# systemctl  start nginx.service 
+[root@localhost ~]# ps -ef | grep nginx
+root      35907      1  0 06:14 ?        00:00:00 nginx: master process /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+nobody    35908  35907  0 06:14 ?        00:00:00 nginx: worker process
+root      35910   2300  0 06:14 pts/0    00:00:00 grep --color=auto nginx
+
+[root@localhost ~]# systemctl  status nginx.service 
+● nginx.service - nginx - web server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+   Active: active (running) since Tue 2021-07-27 06:14:51 CST; 1min 7s ago
+  Process: 35905 ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf (code=exited, status=0/SUCCESS)
+  Process: 35904 ExecStartPre=/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf (code=exited, status=0/SUCCESS)
+ Main PID: 35907 (nginx)
+    Tasks: 2 (limit: 23858)
+   Memory: 1.7M
+   CGroup: /system.slice/nginx.service
+           ├─35907 nginx: master process /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+           └─35908 nginx: worker process
+
+7月 27 06:14:51 localhost.localdomain systemd[1]: /usr/lib/systemd/system/nginx.service:12: Unknown lvalue 'ExecQuit' in section 'Service'
+7月 27 06:14:51 localhost.localdomain systemd[1]: Starting nginx - web server...
+7月 27 06:14:51 localhost.localdomain nginx[35904]: nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
+7月 27 06:14:51 localhost.localdomain nginx[35904]: nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
+7月 27 06:14:51 localhost.localdomain systemd[1]: nginx.service: Failed to parse PID from file /usr/local/nginx/logs/nginx.pid: Invalid argument
+7月 27 06:14:51 localhost.localdomain systemd[1]: Started nginx - web server.
+
+#开机自动启动nginx
+[root@localhost ~]# systemctl enable nginx.service 
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+
+</code></pre><h2 id="域名解析"><a class="anchor" href="#域名解析">#</a> 域名解析</h2><p>域名 -&gt; 主机的 hosts 文件，如果有域名匹配到 ip，则直接返回 ip，如果没有就去本机物理网卡所配置的域名（DNS</p><p>）服务器中找，如果找到则返回 ip，如果没有找到就去当前域名配置的 DNS 服务器找，如果找到就返回 ip。</p><p>@解析的是顶级域名，如 666.com 是顶级域名，aa.666.com 就是顶级域名的二级域名，可以有多级域名。</p><h2 id="简单网站搭建"><a class="anchor" href="#简单网站搭建">#</a> 简单网站搭建</h2><p>nginx 主要目录有 conf、html、logs、sbin，网站入口文件在 html 目录下，可以在该目录下新建 html 文件。</p><p>这里我们在 html 目录下新建一个 html 目录，在该新建的 html 目录下新建两个目录 test1、test2，在这两个目录下各新建一个 index.html 文件</p><pre><code class="language-sh">[root@localhost html]# pwd
+/usr/local/nginx/html/html
+[root@localhost html]# ls
+test1  test2
+</code></pre><p>接下来更改 conf 目录下的配置文件 nginx.conf</p><p>一个 server 包裹下的内容代表配置的是一台主机，意味着可以配置多台主机</p><pre><code>
+server &#123;
+        listen       81;
+        server_name  localhost; #可以自定义（域名或者主机名）
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / &#123;
+            root   html/html/test1; #请求的入口
+            index  index.html index.htm; #index代表索引
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+    &#125;
+
+server &#123;
+        listen       82;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / &#123;
+            root   html/html/test2;
+            index  index.html index.htm;
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+    &#125;
+</code></pre><p>重新加载 nginx 配置：systemctl reload nginx.service，或者重启 nginx：systemctl restart nginx.service。可以使用 systemctl status nginx.service -l 来输出错误信息。</p><p>浏览器访问：<span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyODo4MS8=">http://192.168.137.128:81/</span></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210802195840.png" alt="image-20210802195837343"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210802195858.png" alt="image-20210802195856610"></p><p>也可以将 index 对应的 html 文件改名为其他名字，如 1.html</p><pre><code>server &#123;
+        listen       81;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / &#123;
+            root   html/html/test1;
+            index  1.html index.htm;
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+    &#125;
+</code></pre><pre><code class="language-sh">[root@localhost test1]# mv index.html 1.html
+[root@localhost test1]# ls
+1.html
+</code></pre><p>重启 nginx 访问</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210802223715.png" alt="image-20210802223714004"></p><p>也可以更改 server_name，<span class="exturl" data-url="aHR0cDovL3huLS02NjYtaGIwZTgxc3dsZzA3YzgwOWNldHIuY29t">比如使用域名 666.com</span>，前提是要在本地 hosts 文件中添加该域名的解析，将 666.com 解析到本地</p><pre><code>192.168.137.128 666.com
+</code></pre><pre><code>server &#123;
+        listen       81;
+        server_name  666.com;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / &#123;
+            root   html/html/test1;
+            index  1.html index.htm;
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+    &#125;
+</code></pre><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210802225645.png" alt="image-20210802225643759"></p><h2 id="正向代理与反向代理"><a class="anchor" href="#正向代理与反向代理">#</a> 正向代理与反向代理</h2><p>查看 nginx 是否启动</p><pre><code class="language-sh">[root@localhost test1]# netstat -lnp|grep 80
+tcp        0      0 127.0.0.1:6380          0.0.0.0:*               LISTEN      1055/redis-server 1 
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      45534/nginx: master 
+
+[root@localhost test1]# netstat -lnp|grep nginx
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      45534/nginx: master 
+tcp        0      0 0.0.0.0:81              0.0.0.0:*               LISTEN      45534/nginx: master 
+tcp        0      0 0.0.0.0:82              0.0.0.0:*               LISTEN      45534/nginx: master 
+
+#停止某一个服务
+systemctl stop nginx
+</code></pre><p>反向代理，同样我们现在主机的 hosts 文件中将本机 ip 映射到一个自定义的域名，然后通过访问本机的 82 端口，该 82 端口将被我们自定义的域名代理</p><pre><code>192.168.137.128 www.666.com
+</code></pre><pre><code>server &#123;
+        listen       82;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / &#123;
+            proxy_pass http://www.666.com; #反向代理
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+    &#125;
+</code></pre><p>重启 nginx 测试 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyODo4Mi8=">http://192.168.137.128:82/</span></p><p>也可以使用一台 nginx 代理多台 nginx，即负载均衡，这里以一台 nginx 代理两台 nginx 为例</p><pre><code class="language-sh">[root@localhost nginx]# cd conf/
+[root@localhost conf]# ls
+fastcgi.conf          fastcgi_params          koi-utf  mime.types          nginx.conf          scgi_params          uwsgi_params          win-utf
+fastcgi.conf.default  fastcgi_params.default  koi-win  mime.types.default  nginx.conf.default  scgi_params.default  uwsgi_params.default
+[root@localhost conf]# cp nginx.conf nginx-88.conf
+[root@localhost conf]# cp nginx.conf nginx-99.conf
+[root@localhost conf]# vim nginx-88.conf 
+[root@localhost conf]# vim nginx-99.conf 
+[root@localhost conf]# cd ..
+[root@localhost nginx]# cd html/
+[root@localhost html]# vim index-88.html
+[root@localhost html]# vim index-99.html
+
+</code></pre><pre><code>server &#123;
+        listen       88;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / &#123;
+            root   html;
+            index  index-88.html index.htm;
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+&#125;
+</code></pre><pre><code> server &#123;
+        listen       99;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / &#123;
+            root   html;
+            index  index-99.html index.htm;
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+&#125;
+</code></pre><p>启动这两台 nginx</p><pre><code class="language-sh">[root@localhost nginx]# cd sbin/
+[root@localhost sbin]# ls
+nginx
+[root@localhost sbin]# ./nginx -c  conf/nginx-88.conf #nginx -s stop停止所有nginx服务
+[root@localhost sbin]# ./nginx -c  conf/nginx-99.conf
+
+</code></pre><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210803223157.png" alt="image-20210803223154448"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210803223231.png" alt="image-20210803223230428"></p><p>接下来，使用另外的一台 nginx 代理 (作为反向代理服务器) 以上的两台 nginx</p><pre><code>upstream test &#123;
+        server 192.168.137.128:88;
+        server 192.168.137.128:99;
+&#125;
+
+server &#123;
+        listen       80;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / &#123;
+            proxy_pass http://test; #test需要与以上upstream后面的名字要一致
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+    &#125;
+</code></pre><p>重启 nginx，此时重启后可能导致之前启动的两台 nginx 被关闭</p><pre><code class="language-sh">root@localhost nginx]# systemctl restart nginx.service 
+[root@localhost nginx]# ps -ef | grep nginx
+root      49296      1  0 22:30 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-88.conf
+nobody    49297  49296  0 22:30 ?        00:00:00 nginx: worker process
+root      49838      1  0 23:19 ?        00:00:00 nginx: master process /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+nobody    49839  49838  0 23:19 ?        00:00:00 nginx: worker process
+root      49842  48245  0 23:19 pts/0    00:00:00 grep --color=auto nginx
+[root@localhost nginx]# cd sbin/
+[root@localhost sbin]# ./nginx -c conf/nginx-99.conf
+[root@localhost sbin]# ps -ef | grep nginx
+root      49296      1  0 22:30 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-88.conf
+nobody    49297  49296  0 22:30 ?        00:00:00 nginx: worker process
+root      49838      1  0 23:19 ?        00:00:00 nginx: master process /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+nobody    49839  49838  0 23:19 ?        00:00:00 nginx: worker process
+root      49853      1  0 23:20 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-99.conf
+nobody    49854  49853  0 23:20 ?        00:00:00 nginx: worker process
+root      49856  48245  0 23:20 pts/0    00:00:00 grep --color=auto nginx
+
+</code></pre><p>访问测试 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyOC8lRUYlQkMlOEMlRTUlOEYlQUYlRTQlQkIlQTUlRTclOUMlOEIlRTUlODglQjAlRTQlQjklOEIlRTUlODklOEQlRTUlOTAlQUYlRTUlOEElQTglRTclOUElODQlRTQlQjglQTQlRTUlOEYlQjBuZ2lueCVFNCVCQyU5QSVFOCVBMiVBQiVFNCVCQSVBNCVFNiU5QiVCRiVFOCVBRSVCRiVFOSU5NyVBRSVFNSU4OCVCMA==">http://192.168.137.128/，可以看到之前启动的两台 nginx 会被交替访问到</span></p><h3 id="权重"><a class="anchor" href="#权重">#</a> 权重</h3><p>此外，可以配置访问的权重</p><pre><code>upstream test &#123;
+        server 192.168.137.128:88 weight=1;
+        server 192.168.137.128:99 weight=10;
+&#125;
+</code></pre><h2 id="https配置"><a class="anchor" href="#https配置">#</a> HTTPS 配置</h2><p>在 nginx 中配置 HTTPS 需要 SSL 证书，我这里已经申请好了一个域名以及域名对应的证书，接下来把域名配置在本地主机的 hosts 文件中</p><pre><code>192.168.137.128 www.baiyezi.vip
+</code></pre><p>然后将申请好的 SSL 证书下载（我这里使用腾讯云的免费证书）并上传到 nginx 的 conf 目录下，最后需要配置 nginx.conf，并在 html 目录下创建一个 html，比如 index-https.html</p><pre><code> # HTTPS server
+    server &#123;
+        listen       443 ssl;
+        server_name  www.baiyezi.vip;
+
+        ssl_certificate      www.baiyezi.vip.crt;
+        ssl_certificate_key  www.baiyezi.vip.key;
+
+        ssl_session_cache    shared:SSL:1m;
+        ssl_session_timeout  5m;
+
+        #ssl_ciphers  HIGH:!aNULL:!MD5;
+        #ssl_prefer_server_ciphers  on;
+
+        location / &#123;
+            root   html;
+            index  index-https.html;
+        &#125;
+    &#125;
+</code></pre><p>测试配置文件是否成功</p><pre><code class="language-sh">[root@localhost conf]# ../sbin/nginx -t
+nginx: [emerg] the &quot;ssl&quot; parameter requires ngx_http_ssl_module in /usr/local/nginx/conf/nginx.conf:101
+nginx: configuration file /usr/local/nginx/conf/nginx.conf test failed
+
+</code></pre><p>报错原因：缺少 SSL 模块</p><pre><code class="language-sh">[root@localhost conf]# cd ..
+[root@localhost nginx]# cd sbin/
+#查看安装nginx时安装的其他模块
+[root@localhost sbin]# ./nginx -V
+nginx version: nginx/1.21.1
+built by gcc 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) 
+configure arguments: --prefix=/usr/local/nginx
+[root@localhost sbin]# cd ..
+[root@localhost nginx]# systemctl stop nginx.service 
+[root@localhost nginx]# ps -ef | grep nginx
+root      49296      1  0 19:09 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-88.conf
+nobody    49297  49296  0 19:09 ?        00:00:00 nginx: worker process
+root      49853      1  0 19:58 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-99.conf
+nobody    49854  49853  0 19:58 ?        00:00:00 nginx: worker process
+root      51885  50173  0 23:36 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost nginx]# cd ~
+[root@localhost ~]# ls
+ anaconda-ks.cfg  'index.html?id=498903'   java   mysql-5.7.28-linux-glibc2.12-x86_64.tar.gz   nginx-1.21.1.tar.gz   test
+ arthas-boot.jar   initial-setup-ks.cfg    logs   nginx-1.21.1                                 redis-6.0.9.tar.gz    testsocket
+[root@localhost ~]# cd nginx-1.21.1/
+[root@localhost nginx-1.21.1]# ls
+auto  CHANGES  CHANGES.ru  conf  configure  contrib  html  LICENSE  Makefile  man  objs  README  src
+#保证有OpenSSL库
+[root@localhost nginx-1.21.1]#yum -y install openssl openssl-devel
+#再次安装nginx时安装SSL模块
+[root@localhost nginx-1.21.1]# ./configure --prefix=/usr/local/nginx --with-http_ssl_module
+#编译。注意不要使用make install，否则会把之前的已有的配置全部覆盖掉
+[root@localhost nginx-1.21.1]# make
+#将编译好的nginx替换掉sbin目录下的nginx（此时，所有nginx服务要停掉）
+[root@localhost nginx-1.21.1]# cp ./objs/nginx /usr/local/nginx/sbin/
+cp：是否覆盖'/usr/local/nginx/sbin/nginx'？ y
+cp: 无法创建普通文件'/usr/local/nginx/sbin/nginx': 文本文件忙
+[root@localhost nginx-1.21.1]# ps -ef | grep nginx
+root      49296      1  0 19:09 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-88.conf
+nobody    49297  49296  0 19:09 ?        00:00:00 nginx: worker process
+root      49853      1  0 19:58 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-99.conf
+nobody    49854  49853  0 19:58 ?        00:00:00 nginx: worker process
+root      89512  50173  0 23:52 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost nginx-1.21.1]# kill -9 1
+[root@localhost nginx-1.21.1]# ps -ef | grep nginx
+root      49296      1  0 19:09 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-88.conf
+nobody    49297  49296  0 19:09 ?        00:00:00 nginx: worker process
+root      49853      1  0 19:58 ?        00:00:00 nginx: master process ./nginx -c conf/nginx-99.conf
+nobody    49854  49853  0 19:58 ?        00:00:00 nginx: worker process
+root      89514  50173  0 23:52 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost nginx-1.21.1]# kill -9 49296
+[root@localhost nginx-1.21.1]# kill -9 49853
+[root@localhost nginx-1.21.1]# ps -ef | grep nginx
+nobody    49297      1  0 19:09 ?        00:00:00 nginx: worker process
+nobody    49854      1  0 19:58 ?        00:00:00 nginx: worker process
+root      89524  50173  0 23:52 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost nginx-1.21.1]# kill -9 49297
+[root@localhost nginx-1.21.1]# kill -9 49854
+[root@localhost nginx-1.21.1]# ps -ef | grep nginx
+root      89531  50173  0 23:53 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost nginx-1.21.1]# cp ./objs/nginx /usr/local/nginx/sbin/
+cp：是否覆盖'/usr/local/nginx/sbin/nginx'？ y
+
+[root@localhost nginx-1.21.1]# cd /usr/local/nginx/sbin/
+[root@localhost sbin]# ./nginx -V
+nginx version: nginx/1.21.1
+built by gcc 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC) 
+built with OpenSSL 1.1.1g FIPS  21 Apr 2020
+TLS SNI support enabled
+configure arguments: --prefix=/usr/local/nginx --with-http_ssl_module
+#启动nginx
+[root@localhost sbin]# ./nginx
+[root@localhost sbin]# 
+
+</code></pre><p>访问测试 <a href="https://www.baiyezi.vip/">https://www.baiyezi.vip/</a></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210805000216.png" alt="image-20210805000213904"></p><h2 id="部署项目"><a class="anchor" href="#部署项目">#</a> 部署项目</h2><p>这里将一个 SpringBoot 项目打包后上传到 linux 下，同时给主机配置我之前申请的域名，在 linux 下启动项目并访问</p><pre><code>192.168.137.128 www.baiyezi.vip
+</code></pre><pre><code class="language-sh">[root@localhost local]# ls
+apollo  bin  etc  games  include  lib  lib64  libexec  mysql5.7  nginx  redis-6.0.9  sbin  serial-go-0.0.1-SNAPSHOT.jar  share  src
+[root@localhost local]# java -jar serial-go-0.0.1-SNAPSHOT.jar 
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.2)
+...
+</code></pre><p><a href="http://www.baiyezi.vip:8080/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E7%8E%B0%E5%9C%A8%E5%8F%AA%E8%83%BD%E4%BB%A5http%E6%96%B9%E5%BC%8F%E8%AE%BF%E9%97%AE%E9%A1%B9%E7%9B%AE">http://www.baiyezi.vip:8080/，可以看到现在只能以 http 方式访问项目</a></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210805223521.png" alt="image-20210805223520396"></p><p>SpringBoot 项目内置的是 Tomcat 服务器，我们可以通过 nginx 的反向代理来将请求代理到 nginx</p><pre><code># HTTPS server
+    server &#123;
+        listen       443 ssl;
+        server_name  www.baiyezi.vip;
+
+        ssl_certificate      www.baiyezi.vip.crt;
+        ssl_certificate_key  www.baiyezi.vip.key;
+
+        #ssl_session_cache    shared:SSL:1m;
+        #ssl_session_timeout  5m;
+
+        #ssl_ciphers  HIGH:!aNULL:!MD5;
+        #ssl_prefer_server_ciphers  on;
+
+        location / &#123;
+            proxy_pass http://127.0.0.1:8080; #将请求反向代理到项目端口8080
+            #root   html;
+            #index  index-https.html;
+        &#125;
+    &#125;
+
+</code></pre><p>此时，访问 <a href="https://www.baiyezi.vip/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E7%94%B1%E5%8E%9F%E6%9D%A5%E7%9A%84htpp%E8%AF%B7%E6%B1%82%E5%8F%98%E4%B8%BA%E4%BA%86%E5%AE%89%E5%85%A8%E7%9A%84https%E8%AF%B7%E6%B1%82%E3%80%82%E8%BF%99%E6%97%B6%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E5%9C%A8%E9%98%B2%E7%81%AB%E5%A2%99%E5%B0%868080%E7%AB%AF%E5%8F%A3%E5%85%B3%E9%97%AD%EF%BC%8C%E9%98%B2%E6%AD%A2%E7%94%A8%E6%88%B7%E4%BB%A5http%E7%9A%848080%E7%AB%AF%E5%8F%A3%E8%AE%BF%E9%97%AE%E9%A1%B9%E7%9B%AE%E3%80%82%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8nginx%E4%BD%9C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E3%80%82">https://www.baiyezi.vip/，可以看到由原来的 htpp 请求变为了安全的 https 请求。这时可以直接在防火墙将 8080 端口关闭，防止用户以 http 的 8080 端口访问项目。进一步可以使用 nginx 作负载均衡。</a></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210805224408.png" alt="image-20210805224405671"></p><h2 id="动静分离"><a class="anchor" href="#动静分离">#</a> 动静分离</h2><p>项目中的 css、js、图片等静态资源在加载时总会拖慢项目的访问速度，所以有必要将静态资源的请求与后端业务分离开来，即访问静态资源不再通过 Tomcat，而是通过 nginx。</p><p>首先配置项目的反向 代理，之后配置多个 location，用于访问单独的静态文件资源</p><pre><code>server &#123;
+        listen       80;
+        server_name  localhost;
+
+        location / &#123;
+            proxy_pass http://127.0.0.1:8080; #项目的反向代理
+        &#125;
+        
+        location /css &#123; # /css的精准匹配优先于 / 的匹配
+        	root /usr/local/nginx/static; #将项目中的css静态文件上传到该目录下
+        &#125;
+        
+        location /js &#123;
+        	root /usr/local/nginx/static; #将项目中的js文件上传到该目录下
+        &#125;
+        
+        location /images &#123;
+        	root /usr/local/nginx/static; #将项目中的图片上传到该目录下
+        &#125;
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+    &#125;
+</code></pre><p>location 后面支持正则匹配</p><pre><code>location ~*/(css|images|js) &#123;
+        	root /usr/local/nginx/static; #将项目中的js文件上传到该目录下
+        &#125;
+</code></pre><h3 id="location-前缀"><a class="anchor" href="#location-前缀">#</a> location 前缀</h3><hr><p>没有前缀 匹配以指定模式开头的 location</p><hr><p>= 精准匹配，不是以指定模式开头</p><hr><p>~ 正则匹配，区分大小写</p><hr><p>~* 正则匹配，不区分大小写</p><hr><p>^~ 非正则匹配，匹配以指定模式开头的 location</p><p><strong>location 匹配顺序</strong></p><ul><li><p>多个正则 location 直接按书写顺序匹配，成功后就不会继续往后面匹配</p></li><li><p>普通（非正则）location 会一直往下，直到找到匹配度最高的（最大前缀匹配）</p></li><li><p>当普通 location 与正则 location 同时存在，如果正则匹配成功，则不会再执行普通匹配</p></li><li><p>所有类型 location 存在时，“=” 匹配 &gt; “^~” 匹配 &gt; 正则匹配 &gt; 普通（最大前缀匹配）</p></li></ul><h3 id="alias与root"><a class="anchor" href="#alias与root">#</a> alias 与 root</h3><p>root 在匹配时会自动加上 location 后面的路径</p><pre><code>location /css &#123;
+        	root /usr/local/nginx/static; #实际访问的是/usr/local/nginx/static/css
+        &#125;
+</code></pre><p>而 alias 不会加上 location 后面的路径，需要额外添加路径</p><pre><code> location /css &#123;
+        alias /usr/local/nginx/static/css;
+    &#125;
+</code></pre><p>1）alias 指定的目录是准确的，即 location 匹配访问的 path 目录下的文件直接是在 alias 目录下查找的；<br>2）root 指定的目录是 location 匹配访问的 path 目录的上一级目录，这个 path 目录一定要是真实存在 root 指定目录下的；<br>3）使用 alias 标签的目录块中不能使用 rewrite 的 break（具体原因不明）；另外，alias 指定的目录后面必须要加上 &quot;/&quot; 符 号！！<br>4）alias 虚拟目录配置中，location 匹配的 path 目录如果后面不带 &quot;/&quot;，那么访问的 url 地址中这个 path 目录后面加不 加 &quot;/&quot; 不影响访问，访问时它会自动加上 &quot;/&quot;；但是如果 location 匹配的 path 目录后面加上 &quot;/&quot;，那么访问的 url 地址中这个 path 目录必须要加上 &quot;/&quot;，访问时它不会自动加上 &quot;/&quot;。如果不加上 &quot;/&quot;，访问就会失败！<br>5）root 目录配置中，location 匹配的 path 目录后面带不带 &quot;/&quot;，都不会影响访问。</p><h2 id="url重写"><a class="anchor" href="#url重写">#</a> URL 重写</h2><p>可以通过 nginx 配置文件的 rewrite 属性来实现。</p><pre><code>rewrite是实现URL重写的关键指令，根据regex (正则表达式)部分内容，
+重定向到replacement，结尾是flag标记。
+
+rewrite    &lt;regex&gt;    &lt;replacement&gt;    [flag];
+关键字      正则        替代内容         flag标记
+
+关键字：其中关键字error_log不能改变
+正则：perl兼容正则表达式语句进行规则匹配，即请求的地址
+替代内容：将正则匹配的内容替换成replacement，即项目中真正存在的请求地址
+flag标记：rewrite支持的flag标记
+
+rewrite参数的标签段位置：
+server,location,if
+
+flag标记说明：
+last  #本条规则匹配完成后，继续向下匹配新的location URI规则
+break  #本条规则匹配完成即终止，不再匹配后面的任何规则
+redirect  #返回302临时重定向，浏览器地址会显示跳转后的URL地址
+permanent  #返回301永久重定向，浏览器地址栏会显示跳转后的URL地址
+</code></pre><pre><code>#假地址中的正则需要用括号括起来
+server &#123;
+	rewrite ^假地址$ 真地址 flag
+&#125;
+</code></pre><pre><code>rewrite   ^/account/list-([0-9]+).html$  /account/list?pageNum=$1  last;
+rewrite   ^/account/(.+)/list-([0-9]+).html$     /account/list?pageNum=$1     last;
+</code></pre><h3 id="短网址"><a class="anchor" href="#短网址">#</a> 短网址</h3><p>使用 nginx 的 rewrite 可以实现短网址的功能</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210807123150.png" alt="image-20210807123148632"></p><h2 id="站点搭建"><a class="anchor" href="#站点搭建">#</a> 站点搭建</h2><h3 id="php一站式环境"><a class="anchor" href="#php一站式环境">#</a> PHP 一站式环境</h3><p>一站式安装包下载 <span class="exturl" data-url="aHR0cHM6Ly9vbmVpbnN0YWNrLmNvbS8=">https://oneinstack.com/</span></p><pre><code class="language-sh">[root@localhost ~]# wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz
+--2021-08-08 10:13:33--  http://mirrors.linuxeye.com/oneinstack-full.tar.gz
+正在解析主机 mirrors.linuxeye.com (mirrors.linuxeye.com)... 1.81.5.180, 1.81.5.177, 1.81.5.178, ...
+正在连接 mirrors.linuxeye.com (mirrors.linuxeye.com)|1.81.5.180|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度：345002307 (329M) [application/octet-stream]
+正在保存至: “oneinstack-full.tar.gz”
+
+oneinstack-full.tar.gz                  100%[============================================================================&gt;] 329.02M  4.26MB/s  用时 1m 59s  
+
+2021-08-08 10:15:32 (2.76 MB/s) - 已保存 “oneinstack-full.tar.gz” [345002307/345002307])
+
+#删除原有的nginx（可以先做备份）
+[root@localhost ~]# rm -rf /usr/local/nginx/
+[root@localhost ~]# ls
+ anaconda-ks.cfg  'index.html?id=498903'   java   mysql-5.7.28-linux-glibc2.12-x86_64.tar.gz   nginx-1.21.1.tar.gz      redis-6.0.9.tar.gz   testsocket
+ arthas-boot.jar   initial-setup-ks.cfg    logs   nginx-1.21.1                                 oneinstack-full.tar.gz   test
+ #解压
+[root@localhost ~]# tar -zxvf oneinstack-full.tar.gz 
+
+[root@localhost ~]# cd oneinstack/
+[root@localhost oneinstack]# ls
+addons.sh        backup.sh  include  install.sh  options.conf       README.md                  src    uninstall.sh  versions.txt
+backup_setup.sh  config     init.d   LICENSE     pureftpd_vhost.sh  reset_db_root_password.sh  tools  upgrade.sh    vhost.sh
+#执行安装脚本
+[root@localhost oneinstack]# ./install.sh 
+Please input SSH port(Default: 22): 
+
+Do you want to enable iptables? [y/n]: n
+
+Do you want to install Web server? [y/n]: y
+
+Please select Nginx server:
+	1. Install Nginx
+	2. Install Tengine
+	3. Install OpenResty
+	4. Do not install
+Please input a number:(Default 1 press Enter) 
+#此处安装apache的原因一般是为了支持短网址，但是现在nginx的rewrite也可以实现短网址，所以不再安装apache
+Do you want to install Apache? [y/n]: n
+
+Please select tomcat server:
+	1. Install Tomcat-10
+	2. Install Tomcat-9
+	3. Install Tomcat-8
+	4. Install Tomcat-7
+	5. Do not install
+Please input a number:(Default 5 press Enter) 5
+#我的linux上有数据库，所以不再安装
+Do you want to install Database? [y/n]: n
+
+Do you want to install PHP? [y/n]: y
+
+Please select a version of the PHP:
+	 1. Install php-5.3
+	 2. Install php-5.4
+	 3. Install php-5.5
+	 4. Install php-5.6
+	 5. Install php-7.0
+	 6. Install php-7.1
+	 7. Install php-7.2
+	 8. Install php-7.3
+	 9. Install php-7.4
+	10. Install php-8.0
+Please input a number:(Default 7 press Enter) 
+
+Do you want to install opcode cache of the PHP? [y/n]: n
+
+Please select PHP extensions:
+	 0. Do not install
+	 1. Install zendguardloader(PHP&lt;=5.6)
+	 2. Install ioncube
+	 3. Install sourceguardian(PHP&lt;=7.2)
+	 4. Install imagick
+	 5. Install gmagick
+	 6. Install fileinfo
+	 7. Install imap
+	 8. Install ldap
+	 9. Install phalcon(PHP&gt;=5.5)
+	10. Install yaf(PHP&gt;=7.0)
+	11. Install redis
+	12. Install memcached
+	13. Install memcache
+	14. Install mongodb
+	15. Install swoole
+	16. Install xdebug(PHP&gt;=5.5)
+Please input numbers:(Default '4 11 12' press Enter) 
+
+Do you want to install Nodejs? [y/n]: n
+
+Do you want to install Pure-FTPd? [y/n]: n
+
+Do you want to install phpMyAdmin? [y/n]: y
+
+Do you want to install redis-server? [y/n]: n
+
+Do you want to install memcached-server? [y/n]: n
+
+#等待若干分钟后。。。
+Build complete.
+Don't forget to run 'make test'.
+
+Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20170718/
+PHP Redis module installed successfully! 
+[xprober.php] found
+####################Congratulations########################
+Total OneinStack Install Time: 42 minutes
+
+Nginx install dir:              /usr/local/nginx
+
+PHP install dir:                /usr/local/php
+
+phpMyAdmin dir:                 /data/wwwroot/default/phpMyAdmin
+phpMyAdmin Control Panel URL:   http://192.168.137.128/phpMyAdmin
+
+Index URL:                      http://192.168.137.128/
+
+Please restart the server and see if the services start up fine.
+Do you want to restart OS ? [y/n]: n
+
+#启动nginx
+[root@localhost oneinstack]# cd /usr/local/nginx/
+[root@localhost nginx]# ls
+client_body_temp  conf  fastcgi_temp  html  logs  proxy_temp  sbin  scgi_temp  uwsgi_temp
+[root@localhost nginx]# cd sbin/
+[root@localhost sbin]# ls
+nginx
+[root@localhost sbin]# ./nginx 
+
+</code></pre><p>访问 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyOC8=">http://192.168.137.128/</span></p><p>phpMyAdmin 可以访问数据库并操作数据库</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808113846.png" alt="image-20210808113838821"></p><h3 id="bbs搭建"><a class="anchor" href="#bbs搭建">#</a> BBS 搭建</h3><p>有了以上环境后，我们可以简单的搭建一个 BBS 论坛，源码可以直接下载开源的 <span class="exturl" data-url="aHR0cDovL2Rvd24uY2hpbmF6LmNvbS9zb2Z0LzM0MDk0Lmh0bQ==">http://down.chinaz.com/soft/34094.htm</span></p><p>下载完成之后将压缩包中的 upload 文件上传到 /data/wwwroot/default/</p><pre><code class="language-sh">[root@localhost sbin]# cd /data/wwwroot/default/
+[root@localhost default]# ls
+index.html  phpinfo.php  phpMyAdmin  upload  xprober.php
+[root@localhost default]# mv upload bbs
+[root@localhost default]# ls
+bbs  index.html  phpinfo.php  phpMyAdmin  xprober.php
+# 将该源码目录赋予读写可执行权限，否则安装时报错
+[root@localhost default]# chmod -R 777 bbs/
+</code></pre><p>直接访问 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyOC9iYnM=">http://192.168.137.128/bbs</span> 按照提示安装即可</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808115046.png" alt="image-20210808115044795"></p><p>报错，提示一些目录不存在，原因是 Discuz 版本的问题，重新下载一个低版本即可，这里为 Discuz_X3.4_SC_UTF8_20210320</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808120045.png" alt="image-20210808120042991"></p><p>下一步，选择全新安装</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808120637.png" alt="image-20210808120635416"></p><p>填写数据库信息，会自动创建数据库</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808120757.png" alt="image-20210808120754499"></p><p>安装完成，访问测试</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808120819.png" alt="image-20210808120818311"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808121041.png" alt="image-20210808121039733"></p><p><img data-src="C:/Users/samsung/Desktop/img/blog/20210808121136.png" alt="image-20210808121134171"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808121221.png" alt="image-20210808121220113"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808121236.png" alt="image-20210808121234049"></p><h3 id="博客搭建"><a class="anchor" href="#博客搭建">#</a> 博客搭建</h3><p>除了以上的 BBS 论坛搭建外，还可以进行博客搭建，这里使用 wordpress 博客搭建。</p><p>wordpress 下载 <span class="exturl" data-url="aHR0cHM6Ly93b3JkcHJlc3Mub3JnL2Rvd25sb2FkLyNkb3dubG9hZC1pbnN0YWxs">https://wordpress.org/download/#download-install</span></p><p>将下载解压后的文件放在 /data/wwwroot/default/ 目录下</p><pre><code class="language-sh">[root@localhost default]# wget -c https://wordpress.org/latest.tar.gz
+[root@localhost default]# tar -zxvf latest.tar.gz
+[root@localhost default]# ls
+bbs  index.html  latest.tar.gz  phpinfo.php  phpMyAdmin  wordpress  xprober.php
+# wordpress默认用户是www，将wordpress目录权限赋予该用户。否则在界面下载插件时要求输入主机域名以及用户名密码
+[root@localhost default]# chown -R www:www wordpress/
+[root@localhost plugins]# ps -ef | grep &quot;php-fpm&quot;
+root      25086      1  0 11:19 ?        00:00:00 php-fpm: master process (/usr/local/php/etc/php-fpm.conf)
+www       74315  25086  0 11:34 ?        00:00:01 php-fpm: pool www
+www       74316  25086  0 11:34 ?        00:00:01 php-fpm: pool www
+www       74317  25086  0 11:34 ?        00:00:01 php-fpm: pool www
+www       74318  25086  0 11:34 ?        00:00:01 php-fpm: pool www
+
+</code></pre><p>直接访问 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyOC93b3JkcHJlc3M=">http://192.168.137.128/wordpress</span> 进行安装</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808141238.png" alt="image-20210808141237585"></p><p>这里的数据库不会自动创建，需要事先创建好，可以直接通过以上的 phpMyAdmin 操作</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808141855.png" alt="image-20210808141853483"></p><p>提示缺少一个 php 配置文件 wp-config.php，需要手动创建并写入提示的内容</p><pre><code class="language-sh">[root@localhost wordpress]# ls
+index.php    wp-activate.php     wp-comments-post.php  wp-cron.php        wp-load.php   wp-settings.php   xmlrpc.php
+license.txt  wp-admin            wp-config-sample.php  wp-includes        wp-login.php  wp-signup.php
+readme.html  wp-blog-header.php  wp-content            wp-links-opml.php  wp-mail.php   wp-trackback.php
+[root@localhost wordpress]# vim wp-config.php
+&lt;?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the web site, you can copy this file to &quot;wp-config.php&quot;
+ * and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'wordpress' );
+
+/** MySQL database username */
+define( 'DB_USER', 'root' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', '123456' );
+
+/** MySQL hostname */
+define( 'DB_HOST', 'localhost' );
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8mb4' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+/**#@+
+ * Authentication unique keys and salts.
+ *
+ * Change these to different unique phrases! You can generate these using
+ * the &#123;@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service&#125;.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define( 'AUTH_KEY',         ';CP*TiW,p(];LIEdQwLR%?)Um+F?ME2BVpJ%99`)lSQrran+jdrSr?-~J.bf0JHo' );
+define( 'SECURE_AUTH_KEY',  'V3lV&#123;z(X%a)JCEoN1XR0&#123;^^Im|pK&amp;jr^%e90&#125;2:Wj-_J:q41;-yHr=IAX-!/EaYA' );
+define( 'LOGGED_IN_KEY',    'Xkoq-*Hc8WH|46z$4FW^yTnBGeNcG[%~k~A$?+%Y_SA`-C9W95v,*= oW &lt;L=y)]' );
+define( 'NONCE_KEY',        ',Byfk==+l]4s~ )&lt;%iUiB 5lIZ%1eu4&lt;!$wXk7EujwHC)x)~vt@Uk1^U8StFtaBy' );
+define( 'AUTH_SALT',        'z&#125;7Iq3E&#125;VL4B&#125;#kU&gt;2|4Y36^[xJPxR.l&#123;t2aUlAn@qx;Vqv~t`!e&#125;.YY:HuMuBu=' );
+define( 'SECURE_AUTH_SALT', '`p7cL6DpIWfFs%fhGGF;@sn|3mm*&#123;jM9=)PH|X^jYtG&gt;[&gt;?oL^9+N]!#Yk!g78p@' );
+define( 'LOGGED_IN_SALT',   '1|M&#123;bK6JD[F/=A/ ?!YP*q-K(Y~+?7JeJ$C_i%fXs%2Mx;1a~&gt;K8)%&lt;k.8b#32f(' );
+define( 'NONCE_SALT',       '6:Pqb,WgNs6U.pOs=I0zcYk?=:]0i*nr^Q(vBOYNLzla`V3#Al) 7EJb@oEzDT?!' );
+
+/**#@-*/
+
+/**
+ * WordPress database table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the documentation.
+ *
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ */
+define( 'WP_DEBUG', false );
+
+/* Add any custom values between this line and the &quot;stop editing&quot; line. */
+
+
+
+/* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( ! defined( 'ABSPATH' ) ) &#123;
+	define( 'ABSPATH', __DIR__ . '/' );
+&#125;
+
+/** Sets up WordPress vars and included files. */
+require_once ABSPATH . 'wp-settings.php';
+
+</code></pre><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808142616.png" alt="image-20210808142612882"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808142850.png" alt="image-20210808142848720"></p><p>登录测试</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808142940.png" alt="image-20210808142937065"></p><p>可以在配置文件中添加一行，这样在界面就可以选择默认语言为简体中文</p><figure class="highlight php"><figcaption data-lang="PHP"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'WPLANG'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'zh_CN'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808153910.png" alt="image-20210808153906961"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808152700.png" alt="image-20210808152654223"></p><p><img data-src="C:/Users/samsung/Desktop/img/blog/20210808155448.png" alt="image-20210808155446826"></p><h3 id="cms搭建"><a class="anchor" href="#cms搭建">#</a> CMS 搭建</h3><p>此外还可以搭建 CMS 后台管理系统，可以下载开源软件 <span class="exturl" data-url="aHR0cDovL2RlZGVjbXMuY29tLw==">http://dedecms.com/</span></p><pre><code class="language-sh">[root@localhost default]# wget -c http://updatenew.dedecms.com/base-v57/package/DedeCMS-V5.7-UTF8-SP2.tar.gz
+[root@localhost default]# ls
+bbs  DedeCMS-V5.7-UTF8-SP2.tar.gz  index.html  phpinfo.php  phpMyAdmin  wordpress  xprober.php
+[root@localhost default]# tar -zxvf DedeCMS-V5.7-UTF8-SP2.tar.gz 
+[root@localhost default]# ls
+bbs  DedeCMS-V5.7-UTF8-SP2.tar.gz  docs  index.html  phpinfo.php  phpMyAdmin  uploads  wordpress  xprober.php
+[root@localhost default]# mv uploads/ cms
+[root@localhost default]# chmod -R 777 cms/
+[root@localhost default]# ls
+bbs  cms  DedeCMS-V5.7-UTF8-SP2.tar.gz  docs  index.html  phpinfo.php  phpMyAdmin  wordpress  xprober.php
+
+</code></pre><p>直接访问 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyOC9jbXM=">http://192.168.137.128/cms</span></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808160558.png" alt="image-20210808160556736"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808160811.png" alt="image-20210808160809981"></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808160905.png" alt="image-20210808160903614"></p><p><img data-src="C:/Users/samsung/Desktop/img/blog/20210808160931.png" alt="image-20210808160929461"></p><h2 id="lua"><a class="anchor" href="#lua">#</a> Lua</h2><h3 id="openresty安装"><a class="anchor" href="#openresty安装">#</a> openresty 安装</h3><p><span class="exturl" data-url="aHR0cHM6Ly9vcGVucmVzdHkub3JnL2NuLw==">https://openresty.org/cn/</span></p><p>你可以在你的 CentOS 系统中添加 <code>openresty</code> 仓库，这样就可以便于未来安装或更新我们的软件包（通过 <code>yum check-update</code> 命令）。 运行下面的命令就可以添加我们的仓库（对于 CentOS 8 或以上版本，应将下面的 <code>yum</code> 都替换成 <code>dnf</code> ）：</p><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># add the yum repo:</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">wget</span> https://openresty.org/package/centos/openresty.repo</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token function">sudo</span> <span class="token function">mv</span> openresty.repo /etc/yum.repos.d/</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># update the yum index:</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token function">sudo</span> yum check-update</pre></td></tr></table></figure><p>然后就可以像下面这样安装软件包，比如 <code>openresty</code> ：</p><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> yum <span class="token function">install</span> -y openresty</pre></td></tr></table></figure><p>默认被安装在 /usr/local/openresty</p><pre><code class="language-sh">[root@localhost openresty]# pwd
+/usr/local/openresty
+[root@localhost openresty]# ls
+bin  COPYRIGHT  luajit  lualib  nginx  openssl111  pcre  site  zlib
+</code></pre><pre><code class="language-sh">#启动openresty
+[root@localhost yum.repos.d]# systemctl start openresty.service 
+</code></pre><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808182108.png" alt="image-20210808182107175"></p><h3 id="lua开发"><a class="anchor" href="#lua开发">#</a> lua 开发</h3><p>可以直接在 openresty 目录下的 nginx 中编写 lua 脚本</p><pre><code>    server &#123; 
+        listen       80; 
+        server_name  localhost; 
+ 
+        #charset koi8-r; 
+ 
+        #access_log  logs/host.access.log  main; 
+ 
+        location / &#123; 
+            root   html; 
+            index  index.html index.htm; 
+        &#125; 
+ 
+		location /lua &#123; 
+			default_type text/html; 
+        	content_by_lua 'ngx.say(&quot;&lt;b&gt;hello world~&lt;/b&gt;&quot;)'; 
+		&#125; 
+
+&#125;
+</code></pre><pre><code class="language-sh">#重新加载配置
+[root@localhost conf]# systemctl reload openresty.service 
+</code></pre><p>访问测试 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyOC9sdWE=">http://192.168.137.128/lua</span></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808183502.png" alt="image-20210808183500784"></p><p>可以在引入单独的 lua 文件</p><pre><code class="language-sh">[root@localhost conf]# vim 001.lua
+ngx.say(&quot;&lt;b&gt;hello world~&lt;/b&gt;&quot;)
+</code></pre><pre><code>location /lua1 &#123;  
+            default_type text/html;  
+            content_by_lua_file conf/001.lua;  
+        &#125;  
+</code></pre><p>重新加载配置后访问测试</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808184712.png" alt="image-20210808184710811"></p><p>可以写一个 lua 配置，然后 nginx 引入该配置</p><pre><code class="language-sh">root@localhost conf]# vim lua.conf
+content_by_lua_file conf/001.lua;
+</code></pre><pre><code>location /lua2 &#123;   
+            default_type text/html;   
+            include lua.conf;   
+        &#125; 
+</code></pre><p>访问测试</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808185335.png" alt="image-20210808185334044"></p><p>此外，还可以在 nginx 配置文件中写 lua 代码块</p><pre><code>location /lua3 &#123;    
+            default_type text/html;    
+            content_by_lua_block &#123; 
+                 ngx.say(&quot;hello world~&lt;br&gt;&quot;)     
+                 ngx.say(&quot;lua_block&quot;)
+                &#125;    
+        &#125;  
+</code></pre><p>重新加载配置后测试</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808190044.png" alt="+"></p><p>include 可以不写在 location 中，nginx.conf</p><pre><code>location /lua2 &#123;   
+            default_type text/html;   
+            include lua.conf;   
+        &#125; 
+ 
+        include lua1.conf; 
+
+</code></pre><p>lua1.conf</p><pre><code>location /lua4 &#123; 
+        default_type text/html; 
+        content_by_lua_file conf/001.lua;  
+&#125;
+</code></pre><p>重新加载配置后访问</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808221211.png" alt="image-20210808221210320"></p><p>location 在匹配 uri 时 / 代表最大前缀匹配，所以以上 lua4 之后随意加上字符也可以访问到</p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808221531.png" alt="image-20210808221529823"></p><p>如果在 location 后面加了 =，那么就是精准匹配</p><pre><code>location =/lua4 &#123; 
+        default_type text/html; 
+        content_by_lua_file conf/001.lua;  
+&#125;
+</code></pre><h3 id="获取nginx-uri中的单一变量"><a class="anchor" href="#获取nginx-uri中的单一变量">#</a> 获取 nginx uri 中的单一变量</h3><pre><code> location /lua5.php &#123;     
+            default_type text/html;     
+            content_by_lua_block &#123;  
+                 ngx.say(ngx.var.arg_a) 
+                &#125;     
+        &#125;  
+</code></pre><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808222734.png" alt="image-20210808222733371"></p><h3 id="lua配置热加载"><a class="anchor" href="#lua配置热加载">#</a> lua 配置热加载</h3><pre><code>  server &#123; 
+        listen       80; 
+        server_name  localhost; 
+ 
+ # 将缓存关闭，使得每次更改都不用手动重新加载配置
+        lua_code_cache off;
+&#125;
+</code></pre><p>重启 openresty</p><pre><code class="language-sh">[root@localhost conf]# systemctl restart openresty.service
+</code></pre><p>此外，lua 热加载只对外部文件的更改有效，对于 nginx 配置文件的有关更改仍然需要重新加载配置文件</p><pre><code>  location /lua6 &#123;   
+            default_type text/html;   
+            content_by_lua_file conf/002.lua;   
+        &#125;  
+</code></pre><p>002.lua</p><figure class="highlight lua"><figcaption data-lang="lua"></figcaption><table><tr><td data-num="1"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span>ngx<span class="token punctuation">.</span>var<span class="token punctuation">.</span>arg_name<span class="token punctuation">)</span></pre></td></tr></table></figure><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808225447.png" alt="image-20210808225442713"></p><p>此时更改 002.lua，然后不重新加载配置，测试访问更改是否生效</p><h3 id="获取nginx-uri中的所有变量"><a class="anchor" href="#获取nginx-uri中的所有变量">#</a> 获取 nginx uri 中的所有变量</h3><p>003.lua</p><figure class="highlight lua"><figcaption data-lang="lua"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">local</span> uri_args <span class="token operator">=</span> ngx<span class="token punctuation">.</span>req<span class="token punctuation">.</span><span class="token function">get_uri_args</span><span class="token punctuation">(</span><span class="token punctuation">)</span> </pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> <span class="token function">pairs</span><span class="token punctuation">(</span>uri_args<span class="token punctuation">)</span> <span class="token keyword">do</span> </pre></td></tr><tr><td data-num="3"></td><td><pre>        <span class="token keyword">if</span> <span class="token function">type</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"table"</span> <span class="token keyword">then</span> </pre></td></tr><tr><td data-num="4"></td><td><pre>                ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token string">":"</span><span class="token punctuation">,</span> table<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span> </pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token keyword">else</span> </pre></td></tr><tr><td data-num="6"></td><td><pre>                ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token string">":"</span><span class="token punctuation">,</span> v<span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span> </pre></td></tr><tr><td data-num="7"></td><td><pre>        <span class="token keyword">end</span> </pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">end</span></pre></td></tr></table></figure><p>nginx.conf</p><pre><code> location /lua7 &#123;    
+            default_type text/html;    
+            content_by_lua_file conf/003.lua;    
+        &#125; 
+</code></pre><p>测试 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMTM3LjEyOC9sdWE3P25hbWU9dG9tJmFtcDthZ2U9MjAmYW1wO2dlbmRlcj1tYW4=">http://192.168.137.128/lua7?name=tom&amp;age=20&amp;gender=man</span></p><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210808234530.png" alt="image-20210808234526657"></p><h3 id="获取nginx请求头信息"><a class="anchor" href="#获取nginx请求头信息">#</a> 获取 nginx 请求头信息</h3><p>004.lua</p><figure class="highlight lua"><figcaption data-lang="lua"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">local</span> headers <span class="token operator">=</span> ngx<span class="token punctuation">.</span>req<span class="token punctuation">.</span><span class="token function">get_headers</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                         </pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string">"Host : "</span><span class="token punctuation">,</span> headers<span class="token punctuation">[</span><span class="token string">"Host"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string">"user-agent : "</span><span class="token punctuation">,</span> headers<span class="token punctuation">[</span><span class="token string">"user-agent"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string">"user-agent : "</span><span class="token punctuation">,</span> headers<span class="token punctuation">.</span>user_agent<span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token keyword">in</span> <span class="token function">pairs</span><span class="token punctuation">(</span>headers<span class="token punctuation">)</span> <span class="token keyword">do</span>  </pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">if</span> <span class="token function">type</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"table"</span> <span class="token keyword">then</span>  </pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>        ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token string">" : "</span><span class="token punctuation">,</span> table<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token keyword">else</span>  </pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre>        ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token string">" : "</span><span class="token punctuation">,</span> v<span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token keyword">end</span>  </pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre><span class="token keyword">end</span></pre></td></tr></table></figure><pre><code>   location /lua8 &#123;     
+            default_type text/html;     
+            content_by_lua_file conf/004.lua;     
+        &#125;    
+</code></pre><p><img data-src="https://gitee.com/bfanfanfan/img/raw/master/docsify/20210809230045.png" alt="image-20210809230043837"></p><h3 id="获取post请求参数"><a class="anchor" href="#获取post请求参数">#</a> 获取 post 请求参数</h3><figure class="highlight lua"><figcaption data-lang="lua"></figcaption><table><tr><td data-num="1"></td><td><pre>ngx<span class="token punctuation">.</span>req<span class="token punctuation">.</span><span class="token function">read_body</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string">"post args begin"</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">local</span> post_args <span class="token operator">=</span> ngx<span class="token punctuation">.</span>req<span class="token punctuation">.</span><span class="token function">get_post_args</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> <span class="token function">pairs</span><span class="token punctuation">(</span>post_args<span class="token punctuation">)</span> <span class="token keyword">do</span>  </pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">if</span> <span class="token function">type</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"table"</span> <span class="token keyword">then</span>  </pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre>        ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token string">" : "</span><span class="token punctuation">,</span> table<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">", "</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">else</span>  </pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre>        ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token string">": "</span><span class="token punctuation">,</span> v<span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span>  </pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token keyword">end</span>  </pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">end</span></pre></td></tr></table></figure><h3 id="http协议版本"><a class="anchor" href="#http协议版本">#</a> http 协议版本</h3><figure class="highlight lua"><figcaption data-lang="lua"></figcaption><table><tr><td data-num="1"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string">"ngx.req.http_version : "</span><span class="token punctuation">,</span> ngx<span class="token punctuation">.</span>req<span class="token punctuation">.</span><span class="token function">http_version</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h3 id="请求方法"><a class="anchor" href="#请求方法">#</a> 请求方法</h3><figure class="highlight lua"><figcaption data-lang="lua"></figcaption><table><tr><td data-num="1"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string">"ngx.req.get_method : "</span><span class="token punctuation">,</span> ngx<span class="token punctuation">.</span>req<span class="token punctuation">.</span><span class="token function">get_method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h3 id="原始的请求头内容"><a class="anchor" href="#原始的请求头内容">#</a> 原始的请求头内容</h3><figure class="highlight lua"><figcaption data-lang="lua"></figcaption><table><tr><td data-num="1"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string">"ngx.req.raw_header : "</span><span class="token punctuation">,</span>  ngx<span class="token punctuation">.</span>req<span class="token punctuation">.</span><span class="token function">raw_header</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h3 id="body内容体"><a class="anchor" href="#body内容体">#</a> body 内容体</h3><figure class="highlight lua"><figcaption data-lang="lua"></figcaption><table><tr><td data-num="1"></td><td><pre>ngx<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string">"ngx.req.get_body_data() : "</span><span class="token punctuation">,</span> ngx<span class="token punctuation">.</span>req<span class="token punctuation">.</span><span class="token function">get_body_data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">)</span></pre></td></tr></table></figure><div class="tags"><a href="/tags/Java/" rel="tag"><i class="ic i-tag"></i> Java</a> <a href="/tags/Nginx/" rel="tag"><i class="ic i-tag"></i> Nginx</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2021-12-24 11:05:06" itemprop="dateModified" datetime="2021-12-24T11:05:06+08:00">2021-12-24</time> </span><span id="/nginx实战" class="item leancloud_visitors" data-flag-title="nginx实战" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="fanfanfan 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="fanfanfan 支付宝"><p>支付宝</p></div><div><img data-src="/images/paypal.png" alt="fanfanfan PayPal"><p>PayPal</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>fanfanfan <i class="ic i-at"><em>@</em></i>书院十四先生</li><li class="link"><strong>本文链接：</strong> <a href="https://www.baiyezi.vip/nginx%E5%AE%9E%E6%88%98" title="nginx实战">https://www.baiyezi.vip/nginx实战</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/Netty" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="Netty"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> Java</span><h3>Netty</h3></a></div><div class="item right"><a href="/title/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitcxhpij20zk0m8hdt.jpg" title="Hello World"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i></span><h3>Hello World</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx%E8%A1%8D%E7%94%9F%E7%89%88%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">Nginx 衍生版本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.1.</span> <span class="toc-text">其他 web 服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86nginx%E5%AE%89%E8%A3%85%E4%B8%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.1.</span> <span class="toc-text">将 nginx 安装为系统服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text">域名解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA"><span class="toc-number">4.</span> <span class="toc-text">简单网站搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E4%B8%8E%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">正向代理与反向代理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%83%E9%87%8D"><span class="toc-number">5.1.</span> <span class="toc-text">权重</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#https%E9%85%8D%E7%BD%AE"><span class="toc-number">6.</span> <span class="toc-text">HTTPS 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE"><span class="toc-number">7.</span> <span class="toc-text">部署项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB"><span class="toc-number">8.</span> <span class="toc-text">动静分离</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#location-%E5%89%8D%E7%BC%80"><span class="toc-number">8.1.</span> <span class="toc-text">location 前缀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alias%E4%B8%8Eroot"><span class="toc-number">8.2.</span> <span class="toc-text">alias 与 root</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#url%E9%87%8D%E5%86%99"><span class="toc-number">9.</span> <span class="toc-text">URL 重写</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%AD%E7%BD%91%E5%9D%80"><span class="toc-number">9.1.</span> <span class="toc-text">短网址</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA"><span class="toc-number">10.</span> <span class="toc-text">站点搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#php%E4%B8%80%E7%AB%99%E5%BC%8F%E7%8E%AF%E5%A2%83"><span class="toc-number">10.1.</span> <span class="toc-text">PHP 一站式环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bbs%E6%90%AD%E5%BB%BA"><span class="toc-number">10.2.</span> <span class="toc-text">BBS 搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="toc-number">10.3.</span> <span class="toc-text">博客搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cms%E6%90%AD%E5%BB%BA"><span class="toc-number">10.4.</span> <span class="toc-text">CMS 搭建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lua"><span class="toc-number">11.</span> <span class="toc-text">Lua</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#openresty%E5%AE%89%E8%A3%85"><span class="toc-number">11.1.</span> <span class="toc-text">openresty 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lua%E5%BC%80%E5%8F%91"><span class="toc-number">11.2.</span> <span class="toc-text">lua 开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96nginx-uri%E4%B8%AD%E7%9A%84%E5%8D%95%E4%B8%80%E5%8F%98%E9%87%8F"><span class="toc-number">11.3.</span> <span class="toc-text">获取 nginx uri 中的单一变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lua%E9%85%8D%E7%BD%AE%E7%83%AD%E5%8A%A0%E8%BD%BD"><span class="toc-number">11.4.</span> <span class="toc-text">lua 配置热加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96nginx-uri%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E5%8F%98%E9%87%8F"><span class="toc-number">11.5.</span> <span class="toc-text">获取 nginx uri 中的所有变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96nginx%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%BF%A1%E6%81%AF"><span class="toc-number">11.6.</span> <span class="toc-text">获取 nginx 请求头信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96post%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0"><span class="toc-number">11.7.</span> <span class="toc-text">获取 post 请求参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#http%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%AC"><span class="toc-number">11.8.</span> <span class="toc-text">http 协议版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="toc-number">11.9.</span> <span class="toc-text">请求方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E7%9A%84%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%86%85%E5%AE%B9"><span class="toc-number">11.10.</span> <span class="toc-text">原始的请求头内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#body%E5%86%85%E5%AE%B9%E4%BD%93"><span class="toc-number">11.11.</span> <span class="toc-text">body 内容体</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/Linux%E4%B8%8B%E5%AE%89%E8%A3%85MySQL" rel="bookmark" title="Linux下安装MySQL">Linux下安装MySQL</a></li><li><a href="/MySQL%E5%9F%BA%E7%A1%80" rel="bookmark" title="MySQL基础">MySQL基础</a></li><li><a href="/IOC%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89" rel="bookmark" title="IOC配置方式（一）">IOC配置方式（一）</a></li><li><a href="/IOC%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89" rel="bookmark" title="IOC配置方式（二）">IOC配置方式（二）</a></li><li><a href="/IOC%E6%B3%A8%E8%A7%A3%E6%96%B9%E5%BC%8F" rel="bookmark" title="IOC注解方式">IOC注解方式</a></li><li><a href="/AOP" rel="bookmark" title="AOP">AOP</a></li><li><a href="/SpringBoot%E5%85%A5%E9%97%A8" rel="bookmark" title="SpringBoot入门">SpringBoot入门</a></li><li><a href="/SpringBoot-Web%E5%BC%80%E5%8F%91" rel="bookmark" title="SpringBoot-Web开发">SpringBoot-Web开发</a></li><li><a href="/SpringBoot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86" rel="bookmark" title="SpringBoot自动装配原理">SpringBoot自动装配原理</a></li><li><a href="/zookeeper%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" rel="bookmark" title="zookeeper搭建及基本概念">zookeeper搭建及基本概念</a></li><li><a href="/zookeeper%E5%8E%9F%E7%90%86" rel="bookmark" title="zookeeper原理">zookeeper原理</a></li><li><a href="/zookeeper%E6%A1%88%E4%BE%8B" rel="bookmark" title="zookeeper案例">zookeeper案例</a></li><li><a href="/MySQL%E8%B0%83%E4%BC%98%EF%BC%88%E4%B8%80%EF%BC%89" rel="bookmark" title="MySQL调优（一）">MySQL调优（一）</a></li><li><a href="/redis%E5%AE%89%E8%A3%85%E5%8F%8ANIO%E5%8E%9F%E7%90%86" rel="bookmark" title="redis安装及NIO原理">redis安装及NIO原理</a></li><li><a href="/SpringMVC%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89" rel="bookmark" title="SpringMVC入门（一）">SpringMVC入门（一）</a></li><li><a href="/SpringMVC%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89" rel="bookmark" title="SpringMVC入门（二）">SpringMVC入门（二）</a></li><li><a href="/SpringMVC-REST%E9%A3%8E%E6%A0%BC" rel="bookmark" title="SpringMVC-REST风格">SpringMVC-REST风格</a></li><li><a href="/SpringMVC%E8%BF%9B%E9%98%B6" rel="bookmark" title="SpringMVC进阶">SpringMVC进阶</a></li><li><a href="/SpringMVC%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93" rel="bookmark" title="SpringMVC源码总结">SpringMVC源码总结</a></li><li><a href="/shiro%E5%85%A5%E9%97%A8" rel="bookmark" title="shiro入门">shiro入门</a></li><li><a href="/shiro%E6%95%B4%E5%90%88SpringBoot" rel="bookmark" title="shiro整合SpringBoot">shiro整合SpringBoot</a></li><li><a href="/shiro%E7%9A%84session%E7%AE%A1%E7%90%86" rel="bookmark" title="shiro的session管理">shiro的session管理</a></li><li><a href="/shiro%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E7%99%BB%E5%BD%95" rel="bookmark" title="shiro的缓存机制与分布式登录">shiro的缓存机制与分布式登录</a></li><li><a href="/%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95" rel="bookmark" title="单点登录">单点登录</a></li><li><a href="/%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86" rel="bookmark" title="线程基础知识">线程基础知识</a></li><li><a href="/%E5%AE%B9%E5%99%A8%E4%B8%8E%E7%BA%BF%E7%A8%8B%E6%B1%A0" rel="bookmark" title="容器与线程池">容器与线程池</a></li><li><a href="/Win10%E5%AE%89%E8%A3%85docker" rel="bookmark" title="Win10安装docker">Win10安装docker</a></li><li><a href="/Win10%E5%AE%89%E8%A3%85docker" rel="bookmark" title="Win10安装docker">Win10安装docker</a></li><li><a href="/JMH" rel="bookmark" title="JMH">JMH</a></li><li><a href="/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B" rel="bookmark" title="并发编程">并发编程</a></li><li><a href="/java-%E6%97%A5%E5%BF%97%E4%BD%93%E7%B3%BB" rel="bookmark" title="java-日志体系">java-日志体系</a></li><li><a href="/redis%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B" rel="bookmark" title="redis的数据类型">redis的数据类型</a></li><li><a href="/redis%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8" rel="bookmark" title="redis进阶使用">redis进阶使用</a></li><li><a href="/redis%E7%9A%84%E9%9B%86%E7%BE%A4" rel="bookmark" title="redis的集群">redis的集群</a></li><li><a href="/redis%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8" rel="bookmark" title="redis在开发中的简单使用">redis在开发中的简单使用</a></li><li><a href="/Composite%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Composite组合模式">Composite组合模式</a></li><li><a href="/ChainOfResponsibility%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F" rel="bookmark" title="ChainOfResponsibility责任链模式">ChainOfResponsibility责任链模式</a></li><li><a href="/Decorator%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Decorator装饰器模式">Decorator装饰器模式</a></li><li><a href="/Facade%E9%97%A8%E9%9D%A2%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Facade门面模式">Facade门面模式</a></li><li><a href="/Flyweight%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Flyweight享元模式">Flyweight享元模式</a></li><li><a href="/Factory%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Factory工厂模式">Factory工厂模式</a></li><li><a href="/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Iterator迭代器模式">Iterator迭代器模式</a></li><li><a href="/Mediator%E8%B0%83%E5%81%9C%E8%80%85%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Mediator调停者模式">Mediator调停者模式</a></li><li><a href="/Proxy%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Proxy代理模式">Proxy代理模式</a></li><li><a href="/Observer%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F" rel="bookmark" title="Observer观察者模式">Observer观察者模式</a></li><li><a href="/Singleton%E5%8D%95%E4%BE%8B" rel="bookmark" title="Singleton单例">Singleton单例</a></li><li><a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BB%A5%E5%8F%8A%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95" rel="bookmark" title="微服务以及架构发展">微服务以及架构发展</a></li><li><a href="/JVM-%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD" rel="bookmark" title="JVM-类的加载">JVM-类的加载</a></li><li><a href="/SpringCloud-Netflix%E4%BD%93%E7%B3%BB" rel="bookmark" title="SpringCloud-Netflix体系">SpringCloud-Netflix体系</a></li><li><a href="/%E5%BA%8F%E5%88%97%E5%8C%96" rel="bookmark" title="序列化">序列化</a></li><li><a href="/JVM-JMM" rel="bookmark" title="JVM-JMM">JVM-JMM</a></li><li><a href="/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84" rel="bookmark" title="分布式系统与高并发系统架构">分布式系统与高并发系统架构</a></li><li><a href="/JVM-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA" rel="bookmark" title="JVM-对象的创建">JVM-对象的创建</a></li><li><a href="/JVM-JVM%E8%B0%83%E4%BC%98" rel="bookmark" title="JVM-JVM调优">JVM-JVM调优</a></li><li><a href="/JVM-GC" rel="bookmark" title="JVM-GC">JVM-GC</a></li><li><a href="/SpringCloud-Alibaba%E4%BD%93%E7%B3%BB" rel="bookmark" title="SpringCloud-Alibaba体系">SpringCloud-Alibaba体系</a></li><li><a href="/SpringCloud-SpringCloud%E4%BD%93%E7%B3%BB" rel="bookmark" title="SpringCloud-SpringCloud体系">SpringCloud-SpringCloud体系</a></li><li><a href="/Apollo" rel="bookmark" title="Apollo">Apollo</a></li><li><a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89" rel="bookmark" title="微服务中的会话管理（一）">微服务中的会话管理（一）</a></li><li><a href="/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO" rel="bookmark" title="磁盘IO与网络IO">磁盘IO与网络IO</a></li><li><a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89" rel="bookmark" title="微服务中的会话管理（二）">微服务中的会话管理（二）</a></li><li><a href="/HTTPS" rel="bookmark" title="HTTPS">HTTPS</a></li><li><a href="/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5" rel="bookmark" title="RocketMQ-基础概念">RocketMQ-基础概念</a></li><li><a href="/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1" rel="bookmark" title="RocketMQ-消息、事务">RocketMQ-消息、事务</a></li><li><a href="/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84" rel="bookmark" title="Kafka-整体架构">Kafka-整体架构</a></li><li><a href="/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B" rel="bookmark" title="网络IO模型">网络IO模型</a></li><li><a href="/Kafka-%E6%90%AD%E5%BB%BA" rel="bookmark" title="Kafka-搭建">Kafka-搭建</a></li><li><a href="/Netty" rel="bookmark" title="Netty">Netty</a></li><li class="active"><a href="/nginx%E5%AE%9E%E6%88%98" rel="bookmark" title="nginx实战">nginx实战</a></li><li><a href="/Java%E5%92%8C%E4%B8%B2%E5%8F%A3%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1" rel="bookmark" title="Java和串口进行通信">Java和串口进行通信</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="fanfanfan" data-src="/images/avatar.png"><p class="name" itemprop="name">fanfanfan</p><div class="description" itemprop="description">花有重开日，人无再少年</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">81</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">6</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">80</span> <span class="name">标签</span></a></div></nav><div class="social"></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>links</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/Netty" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/title/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86" title="线程基础知识">线程基础知识</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B" title="并发编程">并发编程</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a> <i class="ic i-angle-right"></i> <a href="/categories/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="分类于 微服务">微服务</a></div><span><a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BB%A5%E5%8F%8A%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95" title="微服务以及架构发展">微服务以及架构发展</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95" title="单点登录">单点登录</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 java">java</a></div><span><a href="/java%E5%A4%A7%E6%B3%95" title="java大法">java大法</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F" title="Iterator迭代器模式">Iterator迭代器模式</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a> <i class="ic i-angle-right"></i> <a href="/categories/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="分类于 微服务">微服务</a></div><span><a href="/SpringCloud-Alibaba%E4%BD%93%E7%B3%BB" title="SpringCloud-Alibaba体系">SpringCloud-Alibaba体系</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/Observer%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F" title="Observer观察者模式">Observer观察者模式</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/%E5%AE%B9%E5%99%A8%E4%B8%8E%E7%BA%BF%E7%A8%8B%E6%B1%A0" title="容器与线程池">容器与线程池</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/java/" title="分类于 Java">Java</a></div><span><a href="/SpringMVC%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93" title="SpringMVC源码总结">SpringMVC源码总结</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; <span itemprop="copyrightYear">2021</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">fanfanfan @ 书院十四先生</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">1.3m 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">20:23</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"/nginx实战",favicon:{show:"书院十四先生",hide:"书院十四先生"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script></body></html><!-- rebuild by hrmmi -->
