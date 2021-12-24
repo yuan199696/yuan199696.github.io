@@ -3,8 +3,8 @@
     <channel>
         <title>书院十四先生</title>
         <subtitle></subtitle>
-        <icon>https://www.baiyezi.vip/images/favicon.ico</icon>
-        <link>https://www.baiyezi.vip</link>
+        <icon>https://baiyezi.vip/images/favicon.ico</icon>
+        <link>https://baiyezi.vip</link>
         <author>
           <name>fanfanfan</name>
         </author>
@@ -14,27 +14,45 @@
         <lastBuildDate>Fri, 24 Dec 2021 21:31:48 +0800</lastBuildDate>
         <category term="Java" />
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/title/</guid>
+            <guid isPermalink="true">https://baiyezi.vip/title/</guid>
             <title></title>
-            <link>https://www.baiyezi.vip/title/</link>
+            <link>https://baiyezi.vip/title/</link>
             <pubDate>Fri, 24 Dec 2021 21:31:48 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;在结构不变的情况下动态改变对于内部元素的动作&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/title/</guid>
+            <guid isPermalink="true">https://baiyezi.vip/title/</guid>
             <title></title>
-            <link>https://www.baiyezi.vip/title/</link>
+            <link>https://baiyezi.vip/title/</link>
             <pubDate>Fri, 24 Dec 2021 21:31:48 +0800</pubDate>
             <description><![CDATA[  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E5%9F%BA%E4%BA%8ETypora%E7%9A%84%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%88%B6%E4%BD%9C</guid>
+            <guid isPermalink="true">https://baiyezi.vip/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B5%8B%E8%AF%95</guid>
+            <title>大数据测试</title>
+            <link>https://baiyezi.vip/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B5%8B%E8%AF%95</link>
+            <category term="大数据" scheme="https://baiyezi.vip/categories/big-data/" />
+            <category term="大数据" scheme="https://baiyezi.vip/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
+            <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://baiyezi.vip/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95</guid>
+            <title>前端测试</title>
+            <link>https://baiyezi.vip/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95</link>
+            <category term="前端" scheme="https://baiyezi.vip/categories/front/" />
+            <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
+            <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://baiyezi.vip/%E5%9F%BA%E4%BA%8ETypora%E7%9A%84%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%88%B6%E4%BD%9C</guid>
             <title>基于Typora的流程图制作</title>
-            <link>https://www.baiyezi.vip/%E5%9F%BA%E4%BA%8ETypora%E7%9A%84%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%88%B6%E4%BD%9C</link>
-            <category term="工具" scheme="https://www.baiyezi.vip/categories/instruments/" />
-            <category term="工具" scheme="https://www.baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
-            <category term="流程图" scheme="https://www.baiyezi.vip/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/" />
+            <link>https://baiyezi.vip/%E5%9F%BA%E4%BA%8ETypora%E7%9A%84%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%88%B6%E4%BD%9C</link>
+            <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
+            <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
+            <category term="流程图" scheme="https://baiyezi.vip/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/" />
             <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zdXBwb3J0LnR5cG9yYS5pby9EcmF3LURpYWdyYW1zLVdpdGgtTWFya2Rvd24v&#34;&gt;官网&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;sequence&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sequence&#34;&gt;#&lt;/a&gt; Sequence&lt;/h2&gt;
@@ -674,34 +692,16 @@ class Color&amp;#123;
 &lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;classDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; Shape&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation important&#34;&gt;&amp;lt;&amp;lt;interface&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    noOfVertices&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    draw&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; Color&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation important&#34;&gt;&amp;lt;&amp;lt;enumeration&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    RED&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    BLUE&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    GREEN&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    WHITE&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    BLACK&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B5%8B%E8%AF%95</guid>
-            <title>大数据测试</title>
-            <link>https://www.baiyezi.vip/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B5%8B%E8%AF%95</link>
-            <category term="大数据" scheme="https://www.baiyezi.vip/categories/big-data/" />
-            <category term="大数据" scheme="https://www.baiyezi.vip/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
-            <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95</guid>
-            <title>前端测试</title>
-            <link>https://www.baiyezi.vip/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95</link>
-            <category term="前端" scheme="https://www.baiyezi.vip/categories/front/" />
-            <category term="前端" scheme="https://www.baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
-            <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/Java%E5%92%8C%E4%B8%B2%E5%8F%A3%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1</guid>
+            <guid isPermalink="true">https://baiyezi.vip/Java%E5%92%8C%E4%B8%B2%E5%8F%A3%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1</guid>
             <title>Java和串口进行通信</title>
-            <link>https://www.baiyezi.vip/Java%E5%92%8C%E4%B8%B2%E5%8F%A3%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1</link>
-            <category term="工具" scheme="https://www.baiyezi.vip/categories/instruments/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="工具" scheme="https://www.baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
-            <category term="前端" scheme="https://www.baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
-            <category term="Vue" scheme="https://www.baiyezi.vip/tags/Vue/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="WebSocket" scheme="https://www.baiyezi.vip/tags/WebSocket/" />
+            <link>https://baiyezi.vip/Java%E5%92%8C%E4%B8%B2%E5%8F%A3%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1</link>
+            <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
+            <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
+            <category term="Vue" scheme="https://baiyezi.vip/tags/Vue/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="WebSocket" scheme="https://baiyezi.vip/tags/WebSocket/" />
             <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;背景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#背景&#34;&gt;#&lt;/a&gt; 背景&lt;/h2&gt;
 &lt;p&gt;使用 Java 进行串口通信，前置知识点：RXTX 的 API、SpringBoot、Thymeleaf、ElementUI、WebSocket。&lt;/p&gt;
@@ -762,14 +762,14 @@ class Color&amp;#123;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89</guid>
+            <guid isPermalink="true">https://baiyezi.vip/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89</guid>
             <title>手动实现翻译小工具（一）</title>
-            <link>https://www.baiyezi.vip/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89</link>
-            <category term="工具" scheme="https://www.baiyezi.vip/categories/instruments/" />
-            <category term="工具" scheme="https://www.baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
-            <category term="前端" scheme="https://www.baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
-            <category term="Vue" scheme="https://www.baiyezi.vip/tags/Vue/" />
-            <category term="翻译" scheme="https://www.baiyezi.vip/tags/%E7%BF%BB%E8%AF%91/" />
+            <link>https://baiyezi.vip/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89</link>
+            <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
+            <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
+            <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
+            <category term="Vue" scheme="https://baiyezi.vip/tags/Vue/" />
+            <category term="翻译" scheme="https://baiyezi.vip/tags/%E7%BF%BB%E8%AF%91/" />
             <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;第一次推文，就先写写最近在做的翻译小工具。通过调用有道云 API 或者百度翻译的 API 来获得翻译资源。&lt;/p&gt;
 &lt;h5 id=&#34;注册有道智云或者百度翻译开放平台&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注册有道智云或者百度翻译开放平台&#34;&gt;#&lt;/a&gt; 🥗 注册有道智云或者百度翻译开放平台：&lt;/h5&gt;
@@ -1388,14 +1388,14 @@ class Color&amp;#123;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89</guid>
+            <guid isPermalink="true">https://baiyezi.vip/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89</guid>
             <title>手动实现翻译小工具（二）</title>
-            <link>https://www.baiyezi.vip/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89</link>
-            <category term="工具" scheme="https://www.baiyezi.vip/categories/instruments/" />
-            <category term="工具" scheme="https://www.baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
-            <category term="前端" scheme="https://www.baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
-            <category term="Vue" scheme="https://www.baiyezi.vip/tags/Vue/" />
-            <category term="翻译" scheme="https://www.baiyezi.vip/tags/%E7%BF%BB%E8%AF%91/" />
+            <link>https://baiyezi.vip/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89</link>
+            <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
+            <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
+            <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
+            <category term="Vue" scheme="https://baiyezi.vip/tags/Vue/" />
+            <category term="翻译" scheme="https://baiyezi.vip/tags/%E7%BF%BB%E8%AF%91/" />
             <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;接着上期的内容来改进我们的翻译小工具。改进后的翻译小工具现在支持：&lt;/p&gt;
 &lt;p&gt;🉑 英文音标的显示与播放（仅当查词为英文时支持，这是有道官方 API 的限制）&lt;/p&gt;
@@ -1424,12 +1424,12 @@ class Color&amp;#123;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/nginx%E5%AE%9E%E6%88%98</guid>
+            <guid isPermalink="true">https://baiyezi.vip/nginx%E5%AE%9E%E6%88%98</guid>
             <title>nginx实战</title>
-            <link>https://www.baiyezi.vip/nginx%E5%AE%9E%E6%88%98</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="Nginx" scheme="https://www.baiyezi.vip/tags/Nginx/" />
+            <link>https://baiyezi.vip/nginx%E5%AE%9E%E6%88%98</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="Nginx" scheme="https://baiyezi.vip/tags/Nginx/" />
             <pubDate>Wed, 15 Sep 2021 20:12:01 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;nginx衍生版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nginx衍生版本&#34;&gt;#&lt;/a&gt; Nginx 衍生版本&lt;/h2&gt;
 &lt;p&gt;Nginx plus 商业版 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubmdpbnguY29tLw==&#34;&gt;https://www.nginx.com/&lt;/span&gt;&lt;/p&gt;
@@ -1960,7 +1960,7 @@ configure arguments: --prefix=/usr/local/nginx --with-http_ssl_module
 [root@localhost sbin]# 
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;访问测试 &lt;a href=&#34;https://www.baiyezi.vip/&#34;&gt;https://www.baiyezi.vip/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;访问测试 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmFpeWV6aS52aXAv&#34;&gt;https://www.baiyezi.vip/&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20210805000216.png&#34; alt=&#34;image-20210805000213904&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;部署项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部署项目&#34;&gt;#&lt;/a&gt; 部署项目&lt;/h2&gt;
 &lt;p&gt;这里将一个 SpringBoot 项目打包后上传到 linux 下，同时给主机配置我之前申请的域名，在 linux 下启动项目并访问&lt;/p&gt;
@@ -1979,7 +1979,7 @@ apollo  bin  etc  games  include  lib  lib64  libexec  mysql5.7  nginx  redis-6.
  :: Spring Boot ::                (v2.5.2)
 ...
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.baiyezi.vip:8080/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E7%8E%B0%E5%9C%A8%E5%8F%AA%E8%83%BD%E4%BB%A5http%E6%96%B9%E5%BC%8F%E8%AE%BF%E9%97%AE%E9%A1%B9%E7%9B%AE&#34;&gt;http://www.baiyezi.vip:8080/，可以看到现在只能以 http 方式访问项目&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5iYWl5ZXppLnZpcDo4MDgwLyVFRiVCQyU4QyVFNSU4RiVBRiVFNCVCQiVBNSVFNyU5QyU4QiVFNSU4OCVCMCVFNyU4RSVCMCVFNSU5QyVBOCVFNSU4RiVBQSVFOCU4MyVCRCVFNCVCQiVBNWh0dHAlRTYlOTYlQjklRTUlQkMlOEYlRTglQUUlQkYlRTklOTclQUUlRTklQTElQjklRTclOUIlQUU=&#34;&gt;http://www.baiyezi.vip:8080/，可以看到现在只能以 http 方式访问项目&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20210805223521.png&#34; alt=&#34;image-20210805223520396&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;SpringBoot 项目内置的是 Tomcat 服务器，我们可以通过 nginx 的反向代理来将请求代理到 nginx&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# HTTPS server
@@ -2004,7 +2004,7 @@ apollo  bin  etc  games  include  lib  lib64  libexec  mysql5.7  nginx  redis-6.
     &amp;#125;
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;此时，访问 &lt;a href=&#34;https://www.baiyezi.vip/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E7%94%B1%E5%8E%9F%E6%9D%A5%E7%9A%84htpp%E8%AF%B7%E6%B1%82%E5%8F%98%E4%B8%BA%E4%BA%86%E5%AE%89%E5%85%A8%E7%9A%84https%E8%AF%B7%E6%B1%82%E3%80%82%E8%BF%99%E6%97%B6%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E5%9C%A8%E9%98%B2%E7%81%AB%E5%A2%99%E5%B0%868080%E7%AB%AF%E5%8F%A3%E5%85%B3%E9%97%AD%EF%BC%8C%E9%98%B2%E6%AD%A2%E7%94%A8%E6%88%B7%E4%BB%A5http%E7%9A%848080%E7%AB%AF%E5%8F%A3%E8%AE%BF%E9%97%AE%E9%A1%B9%E7%9B%AE%E3%80%82%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8nginx%E4%BD%9C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E3%80%82&#34;&gt;https://www.baiyezi.vip/，可以看到由原来的 htpp 请求变为了安全的 https 请求。这时可以直接在防火墙将 8080 端口关闭，防止用户以 http 的 8080 端口访问项目。进一步可以使用 nginx 作负载均衡。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此时，访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmFpeWV6aS52aXAvJUVGJUJDJThDJUU1JThGJUFGJUU0JUJCJUE1JUU3JTlDJThCJUU1JTg4JUIwJUU3JTk0JUIxJUU1JThFJTlGJUU2JTlEJUE1JUU3JTlBJTg0aHRwcCVFOCVBRiVCNyVFNiVCMSU4MiVFNSU4RiU5OCVFNCVCOCVCQSVFNCVCQSU4NiVFNSVBRSU4OSVFNSU4NSVBOCVFNyU5QSU4NGh0dHBzJUU4JUFGJUI3JUU2JUIxJTgyJUUzJTgwJTgyJUU4JUJGJTk5JUU2JTk3JUI2JUU1JThGJUFGJUU0JUJCJUE1JUU3JTlCJUI0JUU2JThFJUE1JUU1JTlDJUE4JUU5JTk4JUIyJUU3JTgxJUFCJUU1JUEyJTk5JUU1JUIwJTg2ODA4MCVFNyVBQiVBRiVFNSU4RiVBMyVFNSU4NSVCMyVFOSU5NyVBRCVFRiVCQyU4QyVFOSU5OCVCMiVFNiVBRCVBMiVFNyU5NCVBOCVFNiU4OCVCNyVFNCVCQiVBNWh0dHAlRTclOUElODQ4MDgwJUU3JUFCJUFGJUU1JThGJUEzJUU4JUFFJUJGJUU5JTk3JUFFJUU5JUExJUI5JUU3JTlCJUFFJUUzJTgwJTgyJUU4JUJGJTlCJUU0JUI4JTgwJUU2JUFEJUE1JUU1JThGJUFGJUU0JUJCJUE1JUU0JUJEJUJGJUU3JTk0JUE4bmdpbnglRTQlQkQlOUMlRTglQjQlOUYlRTglQkQlQkQlRTUlOUQlODclRTglQTElQTElRTMlODAlODI=&#34;&gt;https://www.baiyezi.vip/，可以看到由原来的 htpp 请求变为了安全的 https 请求。这时可以直接在防火墙将 8080 端口关闭，防止用户以 http 的 8080 端口访问项目。进一步可以使用 nginx 作负载均衡。&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20210805224408.png&#34; alt=&#34;image-20210805224405671&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;动静分离&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#动静分离&#34;&gt;#&lt;/a&gt; 动静分离&lt;/h2&gt;
 &lt;p&gt;项目中的 css、js、图片等静态资源在加载时总会拖慢项目的访问速度，所以有必要将静态资源的请求与后端业务分离开来，即访问静态资源不再通过 Tomcat，而是通过 nginx。&lt;/p&gt;
@@ -2590,13 +2590,13 @@ content_by_lua_file conf/001.lua;
 &lt;figure class=&#34;highlight lua&#34;&gt;&lt;figcaption data-lang=&#34;lua&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ngx&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;say&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;ngx.req.get_body_data() : &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; ngx&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;req&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;get_body_data&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&amp;lt;br/&gt;&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/Netty</guid>
+            <guid isPermalink="true">https://baiyezi.vip/Netty</guid>
             <title>Netty</title>
-            <link>https://www.baiyezi.vip/Netty</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="NIO" scheme="https://www.baiyezi.vip/tags/NIO/" />
-            <category term="Netty" scheme="https://www.baiyezi.vip/tags/Netty/" />
+            <link>https://baiyezi.vip/Netty</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
+            <category term="Netty" scheme="https://baiyezi.vip/tags/Netty/" />
             <pubDate>Mon, 16 Aug 2021 21:15:10 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;nettyapi简单使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nettyapi简单使用&#34;&gt;#&lt;/a&gt; NettyAPI 简单使用&lt;/h2&gt;
 &lt;h3 id=&#34;客户端单独测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#客户端单独测试&#34;&gt;#&lt;/a&gt; 客户端单独测试&lt;/h3&gt;
@@ -2643,13 +2643,13 @@ io.netty.channel.ChannelPipelineException: com.fan.netty_1.MyNetty$MyHandler is 
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/Kafka-%E6%90%AD%E5%BB%BA</guid>
+            <guid isPermalink="true">https://baiyezi.vip/Kafka-%E6%90%AD%E5%BB%BA</guid>
             <title>Kafka-搭建</title>
-            <link>https://www.baiyezi.vip/Kafka-%E6%90%AD%E5%BB%BA</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="消息中间件" scheme="https://www.baiyezi.vip/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" />
-            <category term="Kafka" scheme="https://www.baiyezi.vip/tags/Kafka/" />
+            <link>https://baiyezi.vip/Kafka-%E6%90%AD%E5%BB%BA</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="消息中间件" scheme="https://baiyezi.vip/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" />
+            <category term="Kafka" scheme="https://baiyezi.vip/tags/Kafka/" />
             <pubDate>Mon, 16 Aug 2021 20:12:05 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;kafka集群搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kafka集群搭建&#34;&gt;#&lt;/a&gt; kafka 集群搭建&lt;/h2&gt;
 &lt;h3 id=&#34;kafka安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kafka安装&#34;&gt;#&lt;/a&gt; kafka 安装&lt;/h3&gt;
@@ -2700,15 +2700,15 @@ io.netty.channel.ChannelPipelineException: com.fan.netty_1.MyNetty$MyHandler is 
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B</guid>
+            <guid isPermalink="true">https://baiyezi.vip/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B</guid>
             <title>网络IO模型</title>
-            <link>https://www.baiyezi.vip/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="NIO" scheme="https://www.baiyezi.vip/tags/NIO/" />
-            <category term="IO" scheme="https://www.baiyezi.vip/tags/IO/" />
-            <category term="socket" scheme="https://www.baiyezi.vip/tags/socket/" />
-            <category term="BIO" scheme="https://www.baiyezi.vip/tags/BIO/" />
+            <link>https://baiyezi.vip/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
+            <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
+            <category term="socket" scheme="https://baiyezi.vip/tags/socket/" />
+            <category term="BIO" scheme="https://baiyezi.vip/tags/BIO/" />
             <pubDate>Sun, 15 Aug 2021 19:54:25 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;bio&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bio&#34;&gt;#&lt;/a&gt; BIO&lt;/h2&gt;
 &lt;h3 id=&#34;tcp的一些参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp的一些参数&#34;&gt;#&lt;/a&gt; TCP 的一些参数&lt;/h3&gt;
@@ -3103,13 +3103,13 @@ epoll_wait(7, &amp;#123;&amp;#123;EPOLLIN,&amp;#123;u32=8,u64=230296283850473472
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84</guid>
+            <guid isPermalink="true">https://baiyezi.vip/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84</guid>
             <title>Kafka-整体架构</title>
-            <link>https://www.baiyezi.vip/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="消息中间件" scheme="https://www.baiyezi.vip/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" />
-            <category term="Kafka" scheme="https://www.baiyezi.vip/tags/Kafka/" />
+            <link>https://baiyezi.vip/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="消息中间件" scheme="https://baiyezi.vip/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" />
+            <category term="Kafka" scheme="https://baiyezi.vip/tags/Kafka/" />
             <pubDate>Sun, 15 Aug 2021 18:05:22 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;kafka组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kafka组成&#34;&gt;#&lt;/a&gt; kafka 组成&lt;/h2&gt;
 &lt;p&gt;官网 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2thZmthLmFwYWNoZS5vcmcv&#34;&gt;http://kafka.apache.org/&lt;/span&gt;&lt;/p&gt;
@@ -3135,13 +3135,13 @@ epoll_wait(7, &amp;#123;&amp;#123;EPOLLIN,&amp;#123;u32=8,u64=230296283850473472
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1</guid>
+            <guid isPermalink="true">https://baiyezi.vip/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1</guid>
             <title>RocketMQ-消息、事务</title>
-            <link>https://www.baiyezi.vip/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="消息中间件" scheme="https://www.baiyezi.vip/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" />
-            <category term="RocketMQ" scheme="https://www.baiyezi.vip/tags/RocketMQ/" />
+            <link>https://baiyezi.vip/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="消息中间件" scheme="https://baiyezi.vip/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" />
+            <category term="RocketMQ" scheme="https://baiyezi.vip/tags/RocketMQ/" />
             <pubDate>Wed, 11 Aug 2021 21:56:12 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;消息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#消息&#34;&gt;#&lt;/a&gt; 消息&lt;/h2&gt;
 &lt;h3 id=&#34;消息消费模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#消息消费模式&#34;&gt;#&lt;/a&gt; 消息消费模式&lt;/h3&gt;
@@ -3354,13 +3354,13 @@ hello-tag：28
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;com&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;fan&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;rocketmq&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;transaction&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;org&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;apache&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;rocketmq&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;client&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;exception&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;MQBrokerException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;org&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;apache&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;rocketmq&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;client&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;exception&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;MQClientException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;org&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;apache&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;rocketmq&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;client&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;producer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;org&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;apache&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;rocketmq&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;common&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;message&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Message&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;org&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;apache&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;rocketmq&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;common&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;message&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;MessageExt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;org&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;apache&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;rocketmq&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;remoting&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;exception&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;RemotingException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * 消息发送者&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; *&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @Author: fan&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @DateTime: 2021-06-01 14:04&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; **/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Producer&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;MQClientException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;MQBrokerException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RemotingException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;InterruptedException&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;TransactionMQProducer&lt;/span&gt; producer &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;TransactionMQProducer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;xxoo&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 设置 nameserver 地址&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        producer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setNamesrvAddr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;127.0.0.1:9876&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 回调&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        producer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setTransactionListener&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;TransactionListener&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;LocalTransactionState&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;executeLocalTransaction&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Message&lt;/span&gt; msg&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Object&lt;/span&gt; o&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token comment&#34;&gt;// 执行本地事务&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;==========executeLocalTransaction&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;msg:&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;msg&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getBody&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;transactionId:&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; msg&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getTransactionId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    e&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token comment&#34;&gt;// 出错回滚&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;LocalTransactionState&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ROLLBACK_MESSAGE&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token comment&#34;&gt;// 模拟未知，之后会进入 checkLocalTransaction ()&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;LocalTransactionState&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;UNKNOW&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;LocalTransactionState&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;checkLocalTransaction&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;MessageExt&lt;/span&gt; messageExt&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token comment&#34;&gt;//broker 端回调，检查事务&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token comment&#34;&gt;// 如果没有被 consumer 消费，那么就会在该方法中重投消息&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;45&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;=============checkLocalTransaction&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;46&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;msg:&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;messageExt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getBody&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;47&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;transactionId:&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; messageExt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getTransactionId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;48&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token comment&#34;&gt;// 代表事务执行成功&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;49&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;LocalTransactionState&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;COMMIT_MESSAGE&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;50&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;51&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;52&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;53&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        producer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;54&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;55&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;Message&lt;/span&gt; message &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Message&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;xxoo01&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hello transactions&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getBytes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;56&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;SendResult&lt;/span&gt; sendResult &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; producer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;sendMessageInTransaction&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;message&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;57&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;sendResult&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;58&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;59&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//        producer.shutdown();&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;60&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;61&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5</guid>
+            <guid isPermalink="true">https://baiyezi.vip/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5</guid>
             <title>RocketMQ-基础概念</title>
-            <link>https://www.baiyezi.vip/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="消息中间件" scheme="https://www.baiyezi.vip/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" />
-            <category term="RocketMQ" scheme="https://www.baiyezi.vip/tags/RocketMQ/" />
+            <link>https://baiyezi.vip/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="消息中间件" scheme="https://baiyezi.vip/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" />
+            <category term="RocketMQ" scheme="https://baiyezi.vip/tags/RocketMQ/" />
             <pubDate>Tue, 10 Aug 2021 18:24:58 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;主流的 MQ 有很多，比如 ActiveMQ、RabbitMQ、RocketMQ、Kafka、ZeroMQ 等。&lt;/p&gt;
 &lt;p&gt;之前阿里巴巴也是使用 ActiveMQ，随着业务发展，ActiveMQ IO 模块出现瓶颈，后来阿里巴巴 通过一系列优化但是还是不能很好的解决，之后阿里巴巴把注意力放到了主流消息中间件 kafka 上面，但是 kafka 并不能满足他们的要求，尤其是低延迟和高可靠性。&lt;/p&gt;
@@ -3728,15 +3728,15 @@ ntpdate ntp1.aliyun.com
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/HTTPS</guid>
+            <guid isPermalink="true">https://baiyezi.vip/HTTPS</guid>
             <title>HTTPS</title>
-            <link>https://www.baiyezi.vip/HTTPS</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="HTTPS" scheme="https://www.baiyezi.vip/tags/HTTPS/" />
-            <category term="CA证书" scheme="https://www.baiyezi.vip/tags/CA%E8%AF%81%E4%B9%A6/" />
-            <category term="OpenSSL" scheme="https://www.baiyezi.vip/tags/OpenSSL/" />
-            <category term="数字签名" scheme="https://www.baiyezi.vip/tags/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/" />
+            <link>https://baiyezi.vip/HTTPS</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="HTTPS" scheme="https://baiyezi.vip/tags/HTTPS/" />
+            <category term="CA证书" scheme="https://baiyezi.vip/tags/CA%E8%AF%81%E4%B9%A6/" />
+            <category term="OpenSSL" scheme="https://baiyezi.vip/tags/OpenSSL/" />
+            <category term="数字签名" scheme="https://baiyezi.vip/tags/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/" />
             <pubDate>Wed, 04 Aug 2021 17:55:16 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;ssltls&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ssltls&#34;&gt;#&lt;/a&gt; SSL/TLS&lt;/h2&gt;
 &lt;p&gt;TLS (Transport Layer Security) 是 SSL (Secure Socket Layer) 的后续版本&lt;/p&gt;
@@ -4006,15 +4006,15 @@ writing RSA key
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89</guid>
+            <guid isPermalink="true">https://baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89</guid>
             <title>微服务中的会话管理（二）</title>
-            <link>https://www.baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="OAuth2.0" scheme="https://www.baiyezi.vip/tags/OAuth2-0/" />
-            <category term="JWT" scheme="https://www.baiyezi.vip/tags/JWT/" />
-            <category term="Token" scheme="https://www.baiyezi.vip/tags/Token/" />
-            <category term="SSO" scheme="https://www.baiyezi.vip/tags/SSO/" />
+            <link>https://baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="OAuth2.0" scheme="https://baiyezi.vip/tags/OAuth2-0/" />
+            <category term="JWT" scheme="https://baiyezi.vip/tags/JWT/" />
+            <category term="Token" scheme="https://baiyezi.vip/tags/Token/" />
+            <category term="SSO" scheme="https://baiyezi.vip/tags/SSO/" />
             <pubDate>Tue, 03 Aug 2021 20:15:32 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;oauth20&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#oauth20&#34;&gt;#&lt;/a&gt; OAuth2.0&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/160fd879095d008.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -4134,13 +4134,13 @@ token格式：header.payload.signature
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO</guid>
+            <guid isPermalink="true">https://baiyezi.vip/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO</guid>
             <title>磁盘IO与网络IO</title>
-            <link>https://www.baiyezi.vip/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="IO" scheme="https://www.baiyezi.vip/tags/IO/" />
-            <category term="Linux" scheme="https://www.baiyezi.vip/tags/Linux/" />
+            <link>https://baiyezi.vip/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
+            <category term="Linux" scheme="https://baiyezi.vip/tags/Linux/" />
             <pubDate>Sun, 01 Aug 2021 22:29:01 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;Linux 基础知识&lt;/p&gt;
@@ -4200,13 +4200,13 @@ token格式：header.payload.signature
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89</guid>
+            <guid isPermalink="true">https://baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89</guid>
             <title>微服务中的会话管理（一）</title>
-            <link>https://www.baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="跨域" scheme="https://www.baiyezi.vip/tags/%E8%B7%A8%E5%9F%9F/" />
-            <category term="SpringSecurity" scheme="https://www.baiyezi.vip/tags/SpringSecurity/" />
+            <link>https://baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="跨域" scheme="https://baiyezi.vip/tags/%E8%B7%A8%E5%9F%9F/" />
+            <category term="SpringSecurity" scheme="https://baiyezi.vip/tags/SpringSecurity/" />
             <pubDate>Sun, 01 Aug 2021 14:02:20 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;sessioncookiestoken&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sessioncookiestoken&#34;&gt;#&lt;/a&gt; Session/Cookies/Token&lt;/h2&gt;
 &lt;p&gt;浏览器请求访问服务端时，服务端会为浏览器的请求生成一个 session id，用来标识浏览器与服务端之间的会话，生成的 session id 同时会存放在浏览器上一份，称之为 cookies。如果不需要服务端生成的 session id，那么可以手动生成一个唯一标识来保证会话的唯一性，这个唯一标识就是 Token。&lt;/p&gt;
@@ -4526,16 +4526,16 @@ setAllowUrlEncodedPercent(boolean)
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.baiyezi.vip/Apollo</guid>
+            <guid isPermalink="true">https://baiyezi.vip/Apollo</guid>
             <title>Apollo</title>
-            <link>https://www.baiyezi.vip/Apollo</link>
-            <category term="Java" scheme="https://www.baiyezi.vip/categories/java/" />
-            <category term="微服务" scheme="https://www.baiyezi.vip/categories/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" />
-            <category term="Java" scheme="https://www.baiyezi.vip/tags/Java/" />
-            <category term="SpringCloud" scheme="https://www.baiyezi.vip/tags/SpringCloud/" />
-            <category term="微服务" scheme="https://www.baiyezi.vip/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" />
-            <category term="配置中心" scheme="https://www.baiyezi.vip/tags/%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" />
-            <category term="Apollo" scheme="https://www.baiyezi.vip/tags/Apollo/" />
+            <link>https://baiyezi.vip/Apollo</link>
+            <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
+            <category term="微服务" scheme="https://baiyezi.vip/categories/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
+            <category term="SpringCloud" scheme="https://baiyezi.vip/tags/SpringCloud/" />
+            <category term="微服务" scheme="https://baiyezi.vip/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" />
+            <category term="配置中心" scheme="https://baiyezi.vip/tags/%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" />
+            <category term="Apollo" scheme="https://baiyezi.vip/tags/Apollo/" />
             <pubDate>Tue, 27 Jul 2021 20:45:12 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。服务端基于 Spring Boot 和 Spring Cloud 开发，打包后可以直接运行，不需要额外安装 Tomcat 等应用容器。Java 客户端不依赖任何框架，能够运行于所有 Java 运行时环境，同时对 Spring/Spring Boot 环境也有较好的支持。.Net 客户端不依赖任何框架，能够运行于所有.Net 运行时环境。&lt;/p&gt;
 &lt;p&gt;GitHub &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2N0cmlwY29ycC9hcG9sbG8=&#34;&gt;https://github.com/ctripcorp/apollo&lt;/span&gt;&lt;/p&gt;
