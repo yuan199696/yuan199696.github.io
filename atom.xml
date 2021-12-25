@@ -3084,8 +3084,8 @@ epoll_wait(7, &amp;#123;&amp;#123;EPOLLIN,&amp;#123;u32=8,u64=230296283850473472
 </content>
         <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
         <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
-        <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
         <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
+        <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
         <category term="socket" scheme="https://baiyezi.vip/tags/socket/" />
         <category term="BIO" scheme="https://baiyezi.vip/tags/BIO/" />
         <updated>2021-08-15T11:54:25.000Z</updated>

@@ -136,8 +136,8 @@
             "tags": [
                 "Java",
                 "Java",
-                "IO",
                 "NIO",
+                "IO",
                 "socket",
                 "BIO"
             ]
