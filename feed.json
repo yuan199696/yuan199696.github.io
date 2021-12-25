@@ -28,9 +28,9 @@
                 "工具",
                 "Java",
                 "工具",
+                "Java",
                 "前端",
                 "Vue",
-                "Java",
                 "WebSocket"
             ]
         },
@@ -238,10 +238,10 @@
                 "Java",
                 "SpringCloud",
                 "微服务",
+                "配置中心",
                 "限流",
                 "Gateway",
-                "Zuul",
-                "配置中心"
+                "Zuul"
             ]
         },
         {
@@ -256,6 +256,7 @@
                 "Java",
                 "SpringCloud",
                 "微服务",
+                "配置中心",
                 "Sentinel",
                 "限流",
                 "熔断",
@@ -264,7 +265,6 @@
                 "Raft协议",
                 "CAP",
                 "Zuul",
-                "配置中心",
                 "注册中心",
                 "Hystrix"
             ]
