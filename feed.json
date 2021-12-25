@@ -109,8 +109,8 @@
             "tags": [
                 "Java",
                 "Java",
-                "NIO",
                 "IO",
+                "NIO",
                 "socket",
                 "BIO"
             ]
