@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "书院十四先生",
+    "title": null,
     "subtitle": null,
     "icon": "https://baiyezi.vip/images/favicon.ico",
     "description": "花有重开日，人无再少年",
@@ -109,8 +109,8 @@
             "tags": [
                 "Java",
                 "Java",
-                "IO",
                 "NIO",
+                "IO",
                 "socket",
                 "BIO"
             ]
