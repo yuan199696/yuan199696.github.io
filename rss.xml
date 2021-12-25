@@ -689,9 +689,9 @@ class Color&amp;#123;
             <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
             <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
             <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
-            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
             <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
             <category term="Vue" scheme="https://baiyezi.vip/tags/Vue/" />
+            <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
             <category term="WebSocket" scheme="https://baiyezi.vip/tags/WebSocket/" />
             <pubDate>Fri, 24 Dec 2021 09:30:17 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;背景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#背景&#34;&gt;#&lt;/a&gt; 背景&lt;/h2&gt;
@@ -2696,8 +2696,8 @@ io.netty.channel.ChannelPipelineException: com.fan.netty_1.MyNetty$MyHandler is 
             <link>https://baiyezi.vip/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B</link>
             <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
             <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
-            <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
             <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
+            <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
             <category term="socket" scheme="https://baiyezi.vip/tags/socket/" />
             <category term="BIO" scheme="https://baiyezi.vip/tags/BIO/" />
             <pubDate>Sun, 15 Aug 2021 19:54:25 +0800</pubDate>
