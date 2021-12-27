@@ -1388,9 +1388,9 @@ class Color&amp;#123;
         <updated>2021-12-24T01:30:17.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/nginx%E5%AE%9E%E6%88%98</id>
+        <id>https://baiyezi.vip/java/Nginx/nginx%E5%AE%9E%E6%88%98/</id>
         <title>nginx实战</title>
-        <link rel="alternate" href="https://baiyezi.vip/nginx%E5%AE%9E%E6%88%98"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/Nginx/nginx%E5%AE%9E%E6%88%98/"/>
         <content type="html">&lt;h2 id=&#34;nginx衍生版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nginx衍生版本&#34;&gt;#&lt;/a&gt; Nginx 衍生版本&lt;/h2&gt;
 &lt;p&gt;Nginx plus 商业版 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubmdpbnguY29tLw==&#34;&gt;https://www.nginx.com/&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Nginx 开源版 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9uZ2lueC5vcmcv&#34;&gt;https://nginx.org/&lt;/span&gt;&lt;/p&gt;
@@ -2554,9 +2554,9 @@ content_by_lua_file conf/001.lua;
         <updated>2021-09-15T12:12:01.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/Netty</id>
+        <id>https://baiyezi.vip/java/io/Netty/</id>
         <title>Netty</title>
-        <link rel="alternate" href="https://baiyezi.vip/Netty"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/io/Netty/"/>
         <content type="html">&lt;h2 id=&#34;nettyapi简单使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nettyapi简单使用&#34;&gt;#&lt;/a&gt; NettyAPI 简单使用&lt;/h2&gt;
 &lt;h3 id=&#34;客户端单独测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#客户端单独测试&#34;&gt;#&lt;/a&gt; 客户端单独测试&lt;/h3&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * 客户端&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * 1、主动发数据&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * 2、等待别人发数据，需要从 selector 获取相应的事件，才能判断别人是否给自己发送数据&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     *&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * 服务端开启 [root@localhost local]# nc -l 192.168.20.105 9090&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation punctuation&#34;&gt;@Test&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;clientMode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;InterruptedException&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;NioEventLoopGroup&lt;/span&gt; thread &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;NioEventLoopGroup&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 客户端模式&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;NioSocketChannel&lt;/span&gt; client &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;NioSocketChannel&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 将客户端的 channel（中的事件）注册到 NioEventLoopGroup 中的 selector。epoll_ctl&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        thread&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;register&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;client&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;//netty 通过 pipeline 来处理 selector 中的事件（读写等）&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;ChannelPipeline&lt;/span&gt; pipeline &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; client&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        pipeline&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;addLast&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;MyHandler&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 连接服务端&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;ChannelFuture&lt;/span&gt; connect &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; client&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;connect&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;InetSocketAddress&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;192.168.20.105&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;9090&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 等待连接成功后才往下执行代码&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;ChannelFuture&lt;/span&gt; sync &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; connect&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;sync&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;ByteBuf&lt;/span&gt; byteBuf &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Unpooled&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;copiedBuffer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hello server&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getBytes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;ChannelFuture&lt;/span&gt; channelFuture &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; client&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;writeAndFlush&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;byteBuf&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 等待消息发送成功&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        channelFuture&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;sync&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 等待关闭&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        sync&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;channel&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;closeFuture&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;sync&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;client over...&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	客户端事件&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;MyHandler&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ChannelInboundHandlerAdapter&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;channelRegistered&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ChannelHandlerContext&lt;/span&gt; ctx&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;client registed...&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;45&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;46&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;channelActive&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ChannelHandlerContext&lt;/span&gt; ctx&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;47&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;client active...&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;48&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;49&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;50&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;51&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;channelInactive&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ChannelHandlerContext&lt;/span&gt; ctx&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;52&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;client inactive...&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;53&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;54&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;55&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;56&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;channelRead&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ChannelHandlerContext&lt;/span&gt; ctx&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Object&lt;/span&gt; msg&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;57&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;ByteBuf&lt;/span&gt; buf &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ByteBuf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; msg&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;58&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token comment&#34;&gt;//buf 的 read 会移动 buf 中的索引指针，指针走过的数据就不再存在&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;59&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//            CharSequence charSequence = buf.readCharSequence(buf.readableBytes(), CharsetUtil.UTF_8);&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;60&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;CharSequence&lt;/span&gt; charSequence &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; buf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getCharSequence&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; buf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readableBytes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;CharsetUtil&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;UTF_8&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;61&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;charSequence&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;62&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token comment&#34;&gt;// 接收到的再发送回去&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;63&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            ctx&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;writeAndFlush&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;msg&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;64&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;先开启一个服务端&lt;/p&gt;
@@ -2607,9 +2607,9 @@ io.netty.channel.ChannelPipelineException: com.fan.netty_1.MyNetty$MyHandler is 
         <updated>2021-08-16T13:15:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/Kafka-%E6%90%AD%E5%BB%BA</id>
+        <id>https://baiyezi.vip/java/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/Kafka-%E6%90%AD%E5%BB%BA/</id>
         <title>Kafka-搭建</title>
-        <link rel="alternate" href="https://baiyezi.vip/Kafka-%E6%90%AD%E5%BB%BA"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/Kafka-%E6%90%AD%E5%BB%BA/"/>
         <content type="html">&lt;h2 id=&#34;kafka集群搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kafka集群搭建&#34;&gt;#&lt;/a&gt; kafka 集群搭建&lt;/h2&gt;
 &lt;h3 id=&#34;kafka安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kafka安装&#34;&gt;#&lt;/a&gt; kafka 安装&lt;/h3&gt;
 &lt;p&gt;1、安装 Zookeeper&lt;/p&gt;
@@ -2664,9 +2664,9 @@ io.netty.channel.ChannelPipelineException: com.fan.netty_1.MyNetty$MyHandler is 
         <updated>2021-08-16T12:12:05.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B</id>
+        <id>https://baiyezi.vip/java/io/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B/</id>
         <title>网络IO模型</title>
-        <link rel="alternate" href="https://baiyezi.vip/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/io/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B/"/>
         <content type="html">&lt;h2 id=&#34;bio&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bio&#34;&gt;#&lt;/a&gt; BIO&lt;/h2&gt;
 &lt;h3 id=&#34;tcp的一些参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp的一些参数&#34;&gt;#&lt;/a&gt; TCP 的一些参数&lt;/h3&gt;
 &lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#查看指定进程的文件描述符&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;lsof&lt;/span&gt; -p &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#查看连接状态&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;netstat&lt;/span&gt; -natp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#抓取网络通讯包&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;tcpdump&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;socket 服务端（ip：192.168.137.131）&lt;/p&gt;
@@ -3060,16 +3060,16 @@ epoll_wait(7, &amp;#123;&amp;#123;EPOLLIN,&amp;#123;u32=8,u64=230296283850473472
 </content>
         <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
         <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
-        <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
         <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
+        <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
         <category term="socket" scheme="https://baiyezi.vip/tags/socket/" />
         <category term="BIO" scheme="https://baiyezi.vip/tags/BIO/" />
         <updated>2021-08-15T11:54:25.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84</id>
+        <id>https://baiyezi.vip/java/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/</id>
         <title>Kafka-整体架构</title>
-        <link rel="alternate" href="https://baiyezi.vip/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/Kafka-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/"/>
         <content type="html">&lt;h2 id=&#34;kafka组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kafka组成&#34;&gt;#&lt;/a&gt; kafka 组成&lt;/h2&gt;
 &lt;p&gt;官网 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2thZmthLmFwYWNoZS5vcmcv&#34;&gt;http://kafka.apache.org/&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;kafka 是一个高可用、高性能、高扩展的消息中间件，消息中间件还有 RabbitMQ、ActiveMQ 等常用中间件。&lt;/p&gt;
@@ -3099,9 +3099,9 @@ epoll_wait(7, &amp;#123;&amp;#123;EPOLLIN,&amp;#123;u32=8,u64=230296283850473472
         <updated>2021-08-15T10:05:22.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1</id>
+        <id>https://baiyezi.vip/java/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/RocketMQ/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1/</id>
         <title>RocketMQ-消息、事务</title>
-        <link rel="alternate" href="https://baiyezi.vip/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/RocketMQ/RocketMQ-%E6%B6%88%E6%81%AF%E3%80%81%E4%BA%8B%E5%8A%A1/"/>
         <content type="html">&lt;h2 id=&#34;消息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#消息&#34;&gt;#&lt;/a&gt; 消息&lt;/h2&gt;
 &lt;h3 id=&#34;消息消费模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#消息消费模式&#34;&gt;#&lt;/a&gt; 消息消费模式&lt;/h3&gt;
 &lt;p&gt;消息消费模式由消费者来决定，可以由消费者设置 MessageModel 来决定消息模式。&lt;/p&gt;
@@ -3318,9 +3318,9 @@ hello-tag：28
         <updated>2021-08-11T13:56:12.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5</id>
+        <id>https://baiyezi.vip/java/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/RocketMQ/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</id>
         <title>RocketMQ-基础概念</title>
-        <link rel="alternate" href="https://baiyezi.vip/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/RocketMQ/RocketMQ-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
         <content type="html">&lt;p&gt;主流的 MQ 有很多，比如 ActiveMQ、RabbitMQ、RocketMQ、Kafka、ZeroMQ 等。&lt;/p&gt;
 &lt;p&gt;之前阿里巴巴也是使用 ActiveMQ，随着业务发展，ActiveMQ IO 模块出现瓶颈，后来阿里巴巴 通过一系列优化但是还是不能很好的解决，之后阿里巴巴把注意力放到了主流消息中间件 kafka 上面，但是 kafka 并不能满足他们的要求，尤其是低延迟和高可靠性。&lt;/p&gt;
 &lt;p&gt;所以 RocketMQ 是站在巨人的肩膀上（kafka）MetaQ 的内核，又对其进行了优化让其更满足互联网公司的特点。它是纯 Java 开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。 RocketMQ 目前在阿里集团被广泛应用于交易、充值、流计算、消息推送、日志流式处理、binglog 分发等场景。&lt;/p&gt;
@@ -3692,9 +3692,9 @@ ntpdate ntp1.aliyun.com
         <updated>2021-08-10T10:24:58.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/HTTPS</id>
+        <id>https://baiyezi.vip/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BC%9A%E8%AF%9D/HTTPS/</id>
         <title>HTTPS</title>
-        <link rel="alternate" href="https://baiyezi.vip/HTTPS"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BC%9A%E8%AF%9D/HTTPS/"/>
         <content type="html">&lt;h2 id=&#34;ssltls&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ssltls&#34;&gt;#&lt;/a&gt; SSL/TLS&lt;/h2&gt;
 &lt;p&gt;TLS (Transport Layer Security) 是 SSL (Secure Socket Layer) 的后续版本&lt;/p&gt;
 &lt;h2 id=&#34;加密算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加密算法&#34;&gt;#&lt;/a&gt; 加密算法&lt;/h2&gt;
@@ -3970,9 +3970,9 @@ writing RSA key
         <updated>2021-08-04T09:55:16.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89</id>
+        <id>https://baiyezi.vip/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BC%9A%E8%AF%9D/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
         <title>微服务中的会话管理（二）</title>
-        <link rel="alternate" href="https://baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BC%9A%E8%AF%9D/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
         <content type="html">&lt;h2 id=&#34;oauth20&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#oauth20&#34;&gt;#&lt;/a&gt; OAuth2.0&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/160fd879095d008.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;OAuth 的核心就是向第三方应用颁发令牌&lt;/strong&gt;，如在其他 app 上使用微信登录，那么该 app 就需要向微信获取此次登录的 token，而是否能使用微信登录成功取决于 app 在微信是否经过认证以及用户是否授权使用微信登录 app。OAuth2 从 RFC 6749 开始&lt;/p&gt;
@@ -4098,9 +4098,9 @@ token格式：header.payload.signature
         <updated>2021-08-03T12:15:32.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO</id>
+        <id>https://baiyezi.vip/java/io/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO/</id>
         <title>磁盘IO与网络IO</title>
-        <link rel="alternate" href="https://baiyezi.vip/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/io/%E7%A3%81%E7%9B%98IO%E4%B8%8E%E7%BD%91%E7%BB%9CIO/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;Linux 基础知识&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4164,9 +4164,9 @@ token格式：header.payload.signature
         <updated>2021-08-01T14:29:01.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89</id>
+        <id>https://baiyezi.vip/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BC%9A%E8%AF%9D/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/</id>
         <title>微服务中的会话管理（一）</title>
-        <link rel="alternate" href="https://baiyezi.vip/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BC%9A%E8%AF%9D/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
         <content type="html">&lt;h2 id=&#34;sessioncookiestoken&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sessioncookiestoken&#34;&gt;#&lt;/a&gt; Session/Cookies/Token&lt;/h2&gt;
 &lt;p&gt;浏览器请求访问服务端时，服务端会为浏览器的请求生成一个 session id，用来标识浏览器与服务端之间的会话，生成的 session id 同时会存放在浏览器上一份，称之为 cookies。如果不需要服务端生成的 session id，那么可以手动生成一个唯一标识来保证会话的唯一性，这个唯一标识就是 Token。&lt;/p&gt;
 &lt;h2 id=&#34;跨域的解决&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#跨域的解决&#34;&gt;#&lt;/a&gt; 跨域的解决&lt;/h2&gt;
@@ -4490,9 +4490,9 @@ setAllowUrlEncodedPercent(boolean)
         <updated>2021-08-01T06:02:20.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/Apollo</id>
+        <id>https://baiyezi.vip/java/SpringCloud/Apollo/</id>
         <title>Apollo</title>
-        <link rel="alternate" href="https://baiyezi.vip/Apollo"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/SpringCloud/Apollo/"/>
         <content type="html">&lt;p&gt;Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。服务端基于 Spring Boot 和 Spring Cloud 开发，打包后可以直接运行，不需要额外安装 Tomcat 等应用容器。Java 客户端不依赖任何框架，能够运行于所有 Java 运行时环境，同时对 Spring/Spring Boot 环境也有较好的支持。.Net 客户端不依赖任何框架，能够运行于所有.Net 运行时环境。&lt;/p&gt;
 &lt;p&gt;GitHub &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2N0cmlwY29ycC9hcG9sbG8=&#34;&gt;https://github.com/ctripcorp/apollo&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Gitee &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vbm9ib2R5aWFtL2Fwb2xsbw==&#34;&gt;https://gitee.com/nobodyiam/apollo&lt;/span&gt;&lt;/p&gt;
@@ -4565,9 +4565,9 @@ C:\opt\data&amp;#123;appId&amp;#125;\config-cache
         <updated>2021-07-27T12:45:12.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/SpringCloud-SpringCloud%E4%BD%93%E7%B3%BB</id>
+        <id>https://baiyezi.vip/java/SpringCloud/SpringCloud-SpringCloud%E4%BD%93%E7%B3%BB/</id>
         <title>SpringCloud-SpringCloud体系</title>
-        <link rel="alternate" href="https://baiyezi.vip/SpringCloud-SpringCloud%E4%BD%93%E7%B3%BB"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/SpringCloud/SpringCloud-SpringCloud%E4%BD%93%E7%B3%BB/"/>
         <content type="html">&lt;h2 id=&#34;springcloud-admin&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#springcloud-admin&#34;&gt;#&lt;/a&gt; SpringCloud Admin&lt;/h2&gt;
 &lt;h3 id=&#34;admin服务端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#admin服务端&#34;&gt;#&lt;/a&gt; Admin 服务端&lt;/h3&gt;
 &lt;p&gt;新建一个 SpringBoo 项目并引入依赖&lt;/p&gt;
@@ -4843,9 +4843,9 @@ started 3 plugins.
         <updated>2021-07-25T10:12:25.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/SpringCloud-Alibaba%E4%BD%93%E7%B3%BB</id>
+        <id>https://baiyezi.vip/java/SpringCloud/SpringCloud-Alibaba%E4%BD%93%E7%B3%BB/</id>
         <title>SpringCloud-Alibaba体系</title>
-        <link rel="alternate" href="https://baiyezi.vip/SpringCloud-Alibaba%E4%BD%93%E7%B3%BB"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/SpringCloud/SpringCloud-Alibaba%E4%BD%93%E7%B3%BB/"/>
         <content type="html">&lt;p&gt;框架协议对比&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;SpringCloud-Alibaba%E4%BD%93%E7%B3%BB.assets/image-20210721094812975.png&#34; alt=&#34;image-20210721094812975&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Spring 依照 Netflix 开源的产品定义了一套接口称之为 SpringCloud，Alibaba、Netflix 的开源产品就是这套口的具体实现。&lt;/p&gt;
@@ -5199,9 +5199,9 @@ location /&amp;#123;
         <updated>2021-07-10T14:01:56.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/JVM-GC</id>
+        <id>https://baiyezi.vip/java/JVM/JVM-GC/</id>
         <title>JVM-GC</title>
-        <link rel="alternate" href="https://baiyezi.vip/JVM-GC"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/JVM/JVM-GC/"/>
         <content type="html">&lt;h2 id=&#34;garbage-collector&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#garbage-collector&#34;&gt;#&lt;/a&gt; Garbage Collector&lt;/h2&gt;
 &lt;p&gt;JVM 中的垃圾是指：没有任何引用指向的对象，JVM 会自动对这些对象自进行回收，从而达到清理内存的效果&lt;/p&gt;
 &lt;h2 id=&#34;jvm寻找垃圾&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm寻找垃圾&#34;&gt;#&lt;/a&gt; JVM 寻找垃圾&lt;/h2&gt;
@@ -5464,9 +5464,9 @@ PS + PO -&amp;gt; 加内存 换垃圾回收器 -&amp;gt; PN + CMS + SerialOld（
         <updated>2021-07-05T13:30:04.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/JVM-JVM%E8%B0%83%E4%BC%98</id>
+        <id>https://baiyezi.vip/java/JVM/JVM-JVM%E8%B0%83%E4%BC%98/</id>
         <title>JVM-JVM调优</title>
-        <link rel="alternate" href="https://baiyezi.vip/JVM-JVM%E8%B0%83%E4%BC%98"/>
+        <link rel="alternate" href="https://baiyezi.vip/java/JVM/JVM-JVM%E8%B0%83%E4%BC%98/"/>
         <content type="html">&lt;p&gt;JVM 参数查看&lt;/p&gt;
 &lt;p&gt;java -：标准参数，每个版本一样的参数&lt;/p&gt;
 &lt;p&gt;java -X：非标准参数&lt;/p&gt;
