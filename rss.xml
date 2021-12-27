@@ -2672,8 +2672,8 @@ io.netty.channel.ChannelPipelineException: com.fan.netty_1.MyNetty$MyHandler is 
             <link>https://baiyezi.vip/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B</link>
             <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
             <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
-            <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
             <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
+            <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
             <category term="socket" scheme="https://baiyezi.vip/tags/socket/" />
             <category term="BIO" scheme="https://baiyezi.vip/tags/BIO/" />
             <pubDate>Sun, 15 Aug 2021 19:54:25 +0800</pubDate>
