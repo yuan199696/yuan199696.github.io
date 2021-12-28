@@ -744,17 +744,17 @@ class Color&amp;#123;
 &lt;p&gt;百度翻译开放平台：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mYW55aS1hcGkuYmFpZHUuY29tLw==&#34;&gt;https://fanyi-api.baidu.com/&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;以下例程将以有道智云为例展开。&lt;/p&gt;
 &lt;h5 id=&#34;注册成功后首先创建一个实例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注册成功后首先创建一个实例&#34;&gt;#&lt;/a&gt; 🐤 注册成功后首先创建一个实例：&lt;/h5&gt;
-&lt;p&gt;&lt;img data-src=&#34;%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89.assets/image-20200815114216458.png&#34; alt=&#34;image-20200815114216458&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20211228211726.png&#34; alt=&#34;image-20200815114216458&#34; /&gt;&lt;/p&gt;
 &lt;h5 id=&#34;紧接着创建一个应用注意接入方式选择api&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#紧接着创建一个应用注意接入方式选择api&#34;&gt;#&lt;/a&gt; 🌛 紧接着创建一个应用，注意接入方式选择 API：&lt;/h5&gt;
-&lt;p&gt;&lt;img data-src=&#34;%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89.assets/image-20200815121700345.png&#34; alt=&#34;image-20200815121700345&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20211228211739.png&#34; alt=&#34;image-20200815121700345&#34; /&gt;&lt;/p&gt;
 &lt;h5 id=&#34;应用创建好之后需要绑定刚才创建的实例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用创建好之后需要绑定刚才创建的实例&#34;&gt;#&lt;/a&gt; 👱‍♀ 应用创建好之后需要绑定刚才创建的实例：&lt;/h5&gt;
-&lt;p&gt;&lt;img data-src=&#34;%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89.assets/image-20200815122030635.png&#34; alt=&#34;image-20200815122030635&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20211228211747.png&#34; alt=&#34;image-20200815122030635&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;之后便可以通过 API 来进行编程了，有道云官方文档提供了几种编程语言的 demo，这里将以前端调用 API 为例展开讲解。&lt;/p&gt;
 &lt;p&gt;官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9haS55b3VkYW8uY29tL0RPQ1NJUk1BL2h0bWwv&#34;&gt;https://ai.youdao.com/DOCSIRMA/html/&lt;/span&gt;&lt;/p&gt;
 &lt;h5 id=&#34;此次功能以前端框架vue以及前端样式组件element-ui来进行实现-整体效果如下&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#此次功能以前端框架vue以及前端样式组件element-ui来进行实现-整体效果如下&#34;&gt;#&lt;/a&gt; 🌾 此次功能以前端框架 vue 以及前端样式组件 element-ui 来进行实现。整体效果如下：&lt;/h5&gt;
-&lt;p&gt;&lt;img data-src=&#34;%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89.assets/image-20200815145557509.png&#34; alt=&#34;image-20200815145557509&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20211228211754.png&#34; alt=&#34;image-20200815145557509&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;其中应用 ID 以及应用密钥可以在刚才创建的应用中找到：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89.assets/image-20200815145900909.png&#34; alt=&#34;image-20200815145900909&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20211228211800.png&#34; alt=&#34;image-20200815145900909&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;目前整体功能还在进一步完善，有时间再写后续！&lt;/p&gt;
 &lt;h6 id=&#34;整体代码如下&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#整体代码如下&#34;&gt;#&lt;/a&gt; 📑 整体代码如下：&lt;/h6&gt;
 &lt;pre&gt;&lt;code class=&#34;language-vue&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
@@ -1368,7 +1368,7 @@ class Color&amp;#123;
 &lt;p&gt;🉑 英文音标的显示与播放（仅当查词为英文时支持，这是有道官方 API 的限制）&lt;/p&gt;
 &lt;p&gt;💌接入了百度翻译的 API&lt;/p&gt;
 &lt;p&gt;具体效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89.assets/QQ%E5%9B%BE%E7%89%8720200816181834-1597576605650.png&#34; alt=&#34;QQ图片20200816181834-1597576605650&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20211228211822.png&#34; alt=&#34;QQ图片20200816181834-1597576605650&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;📔 说明：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -2672,8 +2672,8 @@ io.netty.channel.ChannelPipelineException: com.fan.netty_1.MyNetty$MyHandler is 
             <link>https://baiyezi.vip/java/io/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B/</link>
             <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
             <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
-            <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
             <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
+            <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
             <category term="socket" scheme="https://baiyezi.vip/tags/socket/" />
             <category term="BIO" scheme="https://baiyezi.vip/tags/BIO/" />
             <pubDate>Sun, 15 Aug 2021 19:54:25 +0800</pubDate>
