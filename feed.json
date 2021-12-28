@@ -238,10 +238,10 @@
                 "Java",
                 "SpringCloud",
                 "微服务",
-                "配置中心",
                 "限流",
                 "Gateway",
-                "Zuul"
+                "Zuul",
+                "配置中心"
             ]
         },
         {
@@ -256,7 +256,6 @@
                 "Java",
                 "SpringCloud",
                 "微服务",
-                "配置中心",
                 "Sentinel",
                 "限流",
                 "熔断",
@@ -265,6 +264,7 @@
                 "Raft协议",
                 "CAP",
                 "Zuul",
+                "配置中心",
                 "注册中心",
                 "Hystrix"
             ]
