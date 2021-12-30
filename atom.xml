@@ -73,8 +73,8 @@
 </content>
         <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
         <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
-        <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
         <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
         <category term="Vue" scheme="https://baiyezi.vip/tags/Vue/" />
         <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
         <category term="WebSocket" scheme="https://baiyezi.vip/tags/WebSocket/" />
@@ -726,42 +726,6 @@ class Color&amp;#123;
         <updated>2021-12-24T01:30:17.000Z</updated>
     </entry>
     <entry>
-        <id>https://baiyezi.vip/instruments/%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
-        <title>手动实现翻译小工具（二）</title>
-        <link rel="alternate" href="https://baiyezi.vip/instruments/%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-        <content type="html">&lt;p&gt;接着上期的内容来改进我们的翻译小工具。改进后的翻译小工具现在支持：&lt;/p&gt;
-&lt;p&gt;🉑 英文音标的显示与播放（仅当查词为英文时支持，这是有道官方 API 的限制）&lt;/p&gt;
-&lt;p&gt;💌接入了百度翻译的 API&lt;/p&gt;
-&lt;p&gt;具体效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20211228211822.png&#34; alt=&#34;QQ图片20200816181834-1597576605650&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;📔 说明：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;百度翻译 API 需要开通企业资质才能返回音标以及音标的播放链接。对于个人而言，其 API 只会返回一项基础的查询结果。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;有道云 API 规定，需要开通 TTS 语音服务才能返回语音链接&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;源码已上传 Github 以及 Gitee，欢迎大家 issue 以及 fork，共同参与改进小工具！&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Gitee：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vYmZhbmZhbmZhbi90cmFuc2xhdGlvbl90b29scy90cmVlL21hc3Rlcg==&#34;&gt;https://gitee.com/bfanfanfan/translation_tools/tree/master&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Github：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3l1YW4xOTk2OTYvdHJhbnNsYXRpb25fdG9vbHM=&#34;&gt;https://github.com/yuan199696/translation_tools&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;💌 我是一只小白猿，下期见！&lt;/p&gt;
-</content>
-        <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
-        <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
-        <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
-        <category term="Vue" scheme="https://baiyezi.vip/tags/Vue/" />
-        <category term="翻译" scheme="https://baiyezi.vip/tags/%E7%BF%BB%E8%AF%91/" />
-        <updated>2021-12-24T01:30:17.000Z</updated>
-    </entry>
-    <entry>
         <id>https://baiyezi.vip/instruments/%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89/</id>
         <title>手动实现翻译小工具（一）</title>
         <link rel="alternate" href="https://baiyezi.vip/instruments/%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%80%EF%BC%89/"/>
@@ -1381,8 +1345,44 @@ class Color&amp;#123;
 &lt;p&gt;👊我是一只小白猿，下期见！&lt;/p&gt;
 </content>
         <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
-        <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
         <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
+        <category term="Vue" scheme="https://baiyezi.vip/tags/Vue/" />
+        <category term="翻译" scheme="https://baiyezi.vip/tags/%E7%BF%BB%E8%AF%91/" />
+        <updated>2021-12-24T01:30:17.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://baiyezi.vip/instruments/%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+        <title>手动实现翻译小工具（二）</title>
+        <link rel="alternate" href="https://baiyezi.vip/instruments/%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E7%BF%BB%E8%AF%91%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+        <content type="html">&lt;p&gt;接着上期的内容来改进我们的翻译小工具。改进后的翻译小工具现在支持：&lt;/p&gt;
+&lt;p&gt;🉑 英文音标的显示与播放（仅当查词为英文时支持，这是有道官方 API 的限制）&lt;/p&gt;
+&lt;p&gt;💌接入了百度翻译的 API&lt;/p&gt;
+&lt;p&gt;具体效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://gitee.com/bfanfanfan/img/raw/master/docsify/20211228211822.png&#34; alt=&#34;QQ图片20200816181834-1597576605650&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;📔 说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;百度翻译 API 需要开通企业资质才能返回音标以及音标的播放链接。对于个人而言，其 API 只会返回一项基础的查询结果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有道云 API 规定，需要开通 TTS 语音服务才能返回语音链接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;源码已上传 Github 以及 Gitee，欢迎大家 issue 以及 fork，共同参与改进小工具！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gitee：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vYmZhbmZhbmZhbi90cmFuc2xhdGlvbl90b29scy90cmVlL21hc3Rlcg==&#34;&gt;https://gitee.com/bfanfanfan/translation_tools/tree/master&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Github：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3l1YW4xOTk2OTYvdHJhbnNsYXRpb25fdG9vbHM=&#34;&gt;https://github.com/yuan199696/translation_tools&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;💌 我是一只小白猿，下期见！&lt;/p&gt;
+</content>
+        <category term="工具" scheme="https://baiyezi.vip/categories/instruments/" />
+        <category term="前端" scheme="https://baiyezi.vip/tags/%E5%89%8D%E7%AB%AF/" />
+        <category term="工具" scheme="https://baiyezi.vip/tags/%E5%B7%A5%E5%85%B7/" />
         <category term="Vue" scheme="https://baiyezi.vip/tags/Vue/" />
         <category term="翻译" scheme="https://baiyezi.vip/tags/%E7%BF%BB%E8%AF%91/" />
         <updated>2021-12-24T01:30:17.000Z</updated>
@@ -3060,8 +3060,8 @@ epoll_wait(7, &amp;#123;&amp;#123;EPOLLIN,&amp;#123;u32=8,u64=230296283850473472
 </content>
         <category term="Java" scheme="https://baiyezi.vip/categories/java/" />
         <category term="Java" scheme="https://baiyezi.vip/tags/Java/" />
-        <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
         <category term="NIO" scheme="https://baiyezi.vip/tags/NIO/" />
+        <category term="IO" scheme="https://baiyezi.vip/tags/IO/" />
         <category term="socket" scheme="https://baiyezi.vip/tags/socket/" />
         <category term="BIO" scheme="https://baiyezi.vip/tags/BIO/" />
         <updated>2021-08-15T11:54:25.000Z</updated>
